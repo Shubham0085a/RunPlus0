@@ -12,8 +12,8 @@ import Image from "next/image";
 import Ourteam from "@/components/ourteam";
 
 const Card = ({ image, heading, description }) => (
-  <div className="bg-white hover:bg-[#EDEEF0] flex items-center justify-center font-montserrat hover:shadow-md w-[32rem] hover:border px-10 py-10 h-[28rem] rounded-2xl">
-    <div className=" w-[25rem] h-[21.50rem] flex flex-col gap-10 items-center justify-center">
+  <div className="bg-white hover:bg-[#EDEEF0] flex items-center justify-center font-montserrat hover:shadow-md hover:border px-10 py-10 h-[28rem] rounded-2xl">
+    <div className=" flex flex-col gap-10 items-center justify-center">
       <div>
         <Image src={image} alt="" />
       </div>
@@ -77,9 +77,9 @@ const About = () => {
       <section id="hero_about">
         <div className=" mx-20 my-5">
           <div className="bg-cover bg-center bg-[url('https://i.ibb.co/C5hVCqf/background3.png')] flex items-center justify-center font-montserrat rounded-2xl text-[#FFFFFF]">
-            <div className=" w-1/2 flex flex-col my-20 gap-5 items-center justify-center">
-              <h1 className=" font-extrabold text-7xl">About Us</h1>
-              <p className=" text-center font-medium text-3xl">
+            <div className="w-11/12 sm:w-3/4 flex flex-col my-20 gap-5 items-center justify-center">
+              <h1 className=" font-semibold text-3xl sm:font-extrabold sm:text-5xl lg:text-7xl">About Us</h1>
+              <p className=" text-center font-medium text-2xl sm:text-3xl">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
@@ -88,15 +88,15 @@ const About = () => {
         </div>
       </section>
       <section id="about_hero">
-        <div className="flex flex-row font-montserrat items-center my-24 justify-center gap-12">
-          <div className=" flex flex-col gap-8">
+        <div className="flex flex-col lg:flex-row mx-20 my-24 lg:items-center justify-center gap-12">
+          <div className=" flex flex-col lg:w-2/4 gap-8">
             <div className=" rounded-3xl overflow-hidden">
               <Image src={AboutHeroImg} alt="" />
             </div>
-            <div className="flex flex-row gap-8">
-              <div className="bg-gradient-to-r from-sky-200 to-sky-500 w-[16.9rem] h-56 flex flex-col items-center justify-center rounded-3xl">
-                <p className=" font-extrabold text-7xl text-white">500K</p>
-                <p className=" font-bold text-xl text-white">
+            <div className="flex flex-row flex-wrap lg:flex-nowrap gap-8">
+              <div className="bg-gradient-to-r lg:w-1/3 from-sky-200 to-sky-500 h-56 lg:h-32 xl:h-56 flex flex-col items-center justify-center rounded-3xl">
+                <p className="font-extrabold lg:font-bold lg:text-5xl xl:text-7xl xl:font-extralight text-7xl text-white">500K</p>
+                <p className=" font-bold text-xl lg:text-lg xl:text-xl text-white">
                   Daily Active Users
                 </p>
               </div>
@@ -105,9 +105,9 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="w-[42rem] flex flex-col gap-10">
+          <div className="flex flex-col lg:w-[40rem] gap-10">
             <div className="flex flex-col gap-10">
-              <p className=" font-extrabold text-6xl">
+              <p className=" font-extrabold text-4xl sm:text-6xl">
                 We&apos;re on a mission to bring ideas to life.
               </p>
               <p className=" font-normal text-2xl">
@@ -204,11 +204,11 @@ const About = () => {
         <div className="font-montserrat flex items-center mt-36 mb-36 justify-center">
           <div className="w-2/3 flex flex-col gap-10">
             <div>
-              <p className=" font-extrabold text-6xl text-center">
+              <p className=" font-extrabold text-4xl sm:text-5xl text-center">
                 Businesses all over the world trust Buffer to build their brand
               </p>
             </div>
-            <div className="flex flex-row items-center justify-around">
+            <div className="flex flex-row flex-wrap gap-10 sm:gap-0 items-center justify-around">
               <div className="flex flex-col items-center justify-center gap-2">
                 <p className=" font-extrabold text-5xl text-[#38D4FF]">
                   10 years
@@ -234,7 +234,7 @@ const About = () => {
         </div>
       </section>
       <section id="our_value">
-        <div className=" font-montserrat my-24">
+        <div className=" font-montserrat mx-10 my-24">
           <h1 className=" text-center font-extrabold text-5xl text-[#002548]">
             Our Values
           </h1>
@@ -257,15 +257,15 @@ const About = () => {
       <section id="investors">
         <div className=" font-montserrat flex items-center my-20 justify-center">
           <div className=" w-3/4">
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col mb-10 gap-10">
               <p className=" font-extrabold text-6xl text-center">
                 Our Investors
               </p>
             </div>
             <div className="flex flex-col gap-5">
-              <div className="flex flex-row gap-5">
+              <div className="flex flex-row flex-wrap lg:flex-nowrap gap-5">
                 <div className=" bg-[#F6F6F6]">
-                  <div className="flex flex-col gap-4 py-12 px-24">
+                  <div className="flex flex-col gap-4 py-12 px-10 lg:px-24">
                     <p className=" font-extrabold text-4xl text-[#5571FF]">
                       facebook
                     </p>
@@ -277,7 +277,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className=" bg-[#F6F6F6]">
-                  <div className="flex flex-col gap-4 py-12 px-24">
+                  <div className="flex flex-col gap-4 py-12 px-10 lg:px-24">
                     <p className=" font-extrabold text-4xl text-[#2F2F2F]">
                     Ini<span className="text-[#5571FF]">_</span>tech
                     </p>
@@ -289,9 +289,9 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-row gap-5">
+              <div className="flex flex-row flex-wrap  lg:flex-nowrap gap-5">
                 <div className=" bg-[#F6F6F6]">
-                  <div className="flex flex-col gap-4 py-12 px-24">
+                  <div className="flex flex-col gap-4 py-12 px-10 lg:px-24">
                     <p className=" font-extrabold text-5xl">
                     <span className="text-[#4285F4]">G</span>
                     <span className="text-[#EA4335]">o</span>
@@ -308,7 +308,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className=" bg-[#F6F6F6]">
-                  <div className="flex flex-col gap-4 py-12 px-24">
+                  <div className="flex flex-col gap-4 py-12 px-10 lg:px-24">
                     <p className=" font-extrabold text-4xl text-[#FF6565]">
                     Umbre<span className="text-[#7C3EFF]">lla</span>
                     </p>

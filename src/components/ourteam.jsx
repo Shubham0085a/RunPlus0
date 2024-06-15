@@ -7,9 +7,9 @@ import Image from "next/image";
 const Ourteam = () => {
   return (
     <section id="our_team">
-        <div className="bg-cover bg-center bg-[url('https://i.ibb.co/gzJKtCJ/Background2.png')] pt-16 font-montserrat text-[#FFFFFF]">
-          <div className="flex flex-row items-center justify-around">
-            <div className=" w-[43rem] flex flex-col gap-5">
+        <div className="bg-cover bg-center bg-[url('https://i.ibb.co/gzJKtCJ/Background2.png')] pt-16 px-10 font-montserrat text-[#FFFFFF]">
+          <div className="flex flex-col gap-10 mx-10 md:mx-0 md:gap-0 md:flex-row items-center justify-around">
+            <div className=" w-auto lg:w-[43rem] flex flex-col gap-5">
               <div>
                 <h1 className=" font-extrabold text-6xl">Our Team</h1>
               </div>
@@ -26,7 +26,7 @@ const Ourteam = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-row items-center justify-center gap-12 py-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-12 py-12">
             <div className="">
               <div>
                 <Image src={Manjunath} alt="" />

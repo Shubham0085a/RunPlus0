@@ -7,13 +7,10 @@ import MultipleImg from "../../assets/multiple.png";
 import SupportImg from "../../assets/support.png";
 import IntegratedImg from "../../assets/integrated.png";
 import Image from "next/image";
-// import TestimonialImg from "../assets/TestimonialImg.png";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import Slider from "@/components/slider";
 
 const Card = ({ image, heading, description }) => (
-  <div className="hover:bg-white bg-[#EDEEF0] flex items-center justify-center font-montserrat hover:shadow-md w-[32rem] border px-10 py-10 h-[33rem] rounded-2xl">
+  <div className="hover:bg-white bg-[#EDEEF0] flex items-center justify-center font-montserrat hover:shadow-md border px-10 py-10 rounded-2xl">
     <div className=" w-[25rem] h-[21.50rem] flex flex-col gap-10 items-start justify-center">
       <div>
         <Image src={image} alt="" />
@@ -34,48 +31,9 @@ Card.propTypes = {
   image: PropTypes.string.isRequired,
 };
 
-// const data = [
-//   {
-//     name: "Riya G.,",
-//     title: "Head of Sales and Marketing",
-//     img: TestimonialImg,
-//     review:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-//   },
-//   {
-//     name: "John Morgan,",
-//     title: "CEO",
-//     img: TestimonialImg,
-//     review:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-//   },
-//   {
-//     name: "Ellie Anderson,",
-//     title: "COO",
-//     img: TestimonialImg,
-//     review:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-//   },
-//   {
-//     name: "Nia Adebayo,",
-//     title: "Manger",
-//     img: TestimonialImg,
-//     review:
-//       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-//   },
-// ];
 
 function Product() {
 
-  // const settings = {
-  //   dots: false,
-  //   fade: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   waitForAnimate: false
-  // };
 
   const cards = [
     {
@@ -121,9 +79,9 @@ function Product() {
       <section id="hero_about">
         <div className=" mx-20 my-5">
           <div className="bg-cover bg-center bg-[url('https://i.ibb.co/C5hVCqf/background3.png')] flex items-center justify-center font-montserrat rounded-2xl text-[#FFFFFF]">
-            <div className=" w-1/2 flex flex-col my-20 gap-5 items-center justify-center">
-              <h1 className=" font-extrabold text-7xl">Our Products</h1>
-              <p className=" text-center font-medium text-3xl">
+            <div className=" w-11/12 sm:w-3/4 flex flex-col my-20 gap-5 items-center justify-center">
+              <h1 className=" font-semibold text-3xl sm:font-extrabold sm:text-5xl lg:text-7xl">Our Products</h1>
+              <p className=" text-center font-medium text-2xl sm:text-3xl">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
@@ -132,13 +90,13 @@ function Product() {
         </div>
       </section>
       <section id="hero">
-        <div className="flex flex-row gap-10 my-20 font-montserrat items-center justify-center">
+        <div className="flex flex-col lg:flex-row gap-10 my-20 mx-20 font-montserrat items-center justify-center">
           <div>
             <Image src={Herologo} alt="" />
           </div>
-          <div className=" w-[50rem] flex flex-col gap-10">
+          <div className=" md:w-[40rem] lg:w-[50rem] flex flex-col gap-10">
             <div className="flex flex-col gap-4">
-              <h1 className=" font-extrabold text-6xl">
+              <h1 className=" font-bold text-4xl sm:font-extrabold sm:text-6xl">
                 Empowerment through Technology with Kalpkarai
               </h1>
               <p className=" font-normal text-2xl pr-20 text-[#808080]">
@@ -148,7 +106,7 @@ function Product() {
                 products.
               </p>
             </div>
-            <div className="w-[30rem] flex flex-col gap-10">
+            <div className="w-[20rem] sm:w-[30rem] flex flex-col gap-10">
               <div className="flex flex-row gap-5">
                 <div>
                   <svg
@@ -285,12 +243,12 @@ function Product() {
         </div>
       </section>
       <section id="kalpkari_works">
-        <div className=" my-24 flex flex-col font-montserrat gap-10 items-center justify-center">
+        <div className=" my-24 mx-10 flex flex-col font-montserrat gap-10 items-center justify-center">
           <h1 className=" font-extrabold text-5xl text-center">
             How Kalpkari Works?
           </h1>
-          <div className="flex flex-row items-center my-10 justify-center gap-10">
-            <div className=" w-[25rem] flex flex-col items-center justify-center gap-10">
+          <div className="flex flex-row flex-wrap items-center my-10 justify-center gap-10">
+            <div className=" max-w-96  flex flex-col items-center justify-center gap-10">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -353,7 +311,7 @@ function Product() {
                 an effective and efficient platform, making it easier for both.
               </p>
             </div>
-            <div className=" w-[25.9rem] flex flex-col items-center justify-center gap-10">
+            <div className=" max-w-96 flex flex-col items-center justify-center gap-10">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -435,7 +393,7 @@ function Product() {
                 Job Seekers.
               </p>
             </div>
-            <div className=" w-[25rem] flex flex-col items-center justify-center gap-10">
+            <div className=" max-w-96 flex flex-col items-center justify-center gap-10">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -488,7 +446,7 @@ function Product() {
         </div>
       </section>
       <section id="products_features">
-        <div className=" font-montserrat my-16">
+        <div className=" font-montserrat mx-10 my-16">
           <h1 className=" text-center font-extrabold text-5xl text-[#002548]">
             Go beyond ultimate features
           </h1>
@@ -506,38 +464,7 @@ function Product() {
           </div>
         </div>
       </section>
-      {/* <section id="testimonals">
-        <div className="flex items-center font-montserrat my-24 justify-center">
-          <div className=" w-3/4 text-center py-16 bg-slate-400">
-            <div>
-              <div>
-                <p className=" font-extrabold text-6xl">Our Happy Family</p>
-              </div>
-              <Slider {...settings}>
-              {data.map((d, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center gap-10 my-10 justify-center"
-                >
-                  <div className=" w-[27.5rem] flex flex-col gap-5 items-center justify-center">
-                    <div className=" rounded-full overflow-hidden">
-                      <img src={d.img} alt="" />
-                    </div>
-                    <div className=" flex flex-row text-xl">
-                      <p className=" font-bold">{d.name}</p>
-                      <p>{d.title}</p>
-                    </div>
-                  </div>
-                  <div className=" w-1/2">
-                    <p className=" font-normal text-2xl">{d.review}</p>
-                  </div>
-                </div>
-              ))}
-              </Slider>
-            </div>
-          </div>
-        </div>
-      </section> */}
+      <Slider />
       <section id="Our_Pricing">
         <div className="font-montserrat my-20 flex items-center justify-center">
           <div className=" w-3/4 flex flex-col gap-10">
@@ -546,17 +473,17 @@ function Product() {
                 Our Pricing
               </p>
             </div>
-            <div className=" flex flex-row items-center justify-center mt-10 gap-10">
-              <div className=" w-[28.125rem] border border-[#DCDCDC] rounded-3xl">
+            <div className=" flex flex-row flex-wrap lg:flex-nowrap items-center justify-center mt-10 gap-10">
+              <div className=" w-[28.125rem] group hover:-translate-y-10 duration-500 hover:shadow-2xl hover:shadow-sky-500 hover:bg-sky-200/5 border border-[#DCDCDC] rounded-3xl">
                 <div className=" flex flex-row items-center p-10 justify-between">
                   <div>
                     <p className=" font-bold text-xl">STANDARD</p>
                   </div>
-                  <div className=" w-36 h-14 rounded-full bg-black flex items-center justify-center">
-                    <button className=" font-semibold text-xl text-white">
+                  <button className=" w-36 h-14 rounded-full bg-black group-hover:bg-[#048FDE] flex items-center justify-center">
+                    <div className=" font-semibold text-xl text-white">
                       Save 20%
-                    </button>
-                  </div>
+                    </div>
+                  </button>
                 </div>
                 <div className=" flex flex-row items-center justify-between p-10 border-b border-t border-[#DCDCDC]">
                   <p className=" font-extrabold text-3xl">$7.99/m</p>
@@ -723,23 +650,23 @@ function Product() {
                       </p>
                     </div>
                   </div>
-                  <div className=" w-full flex items-center justify-center h-[5.625rem] border border-[#DCDCDC] rounded-full">
-                    <button className=" font-medium text-2xl">
+                  <button className=" w-full flex items-center justify-center h-[5.625rem] border group-hover:bg-gradient-to-r group-hover:from-cyan-200 group-hover:to-sky-400 border-[#DCDCDC] rounded-full">
+                    <div className=" font-medium text-2xl group-hover:text-white">
                       Get Started
-                    </button>
-                  </div>
+                    </div>
+                  </button>
                 </div>
               </div>
-              <div className=" w-[28.125rem] border border-[#DCDCDC] rounded-3xl">
+              <div className=" w-[28.125rem] border group hover:-translate-y-10 hover:shadow-2xl hover:shadow-sky-500 hover:bg-sky-200/5 duration-500 border-[#DCDCDC] rounded-3xl">
                 <div className=" flex flex-row items-center p-10 justify-between">
                   <div>
                     <p className=" font-bold text-xl">PREMIUM</p>
                   </div>
-                  <div className=" w-36 h-14 rounded-full bg-[#048FDE] flex items-center justify-center">
-                    <button className=" font-semibold text-xl text-white">
+                  <button className=" w-36 h-14 rounded-full bg-black group-hover:bg-[#048FDE] flex items-center justify-center">
+                    <div className=" font-semibold text-xl text-white">
                       Popular
-                    </button>
-                  </div>
+                    </div>
+                  </button>
                 </div>
                 <div className=" flex flex-row items-center justify-between p-10 border-b border-t border-[#DCDCDC]">
                   <p className=" font-extrabold text-3xl">$14.99/m</p>
@@ -904,23 +831,23 @@ function Product() {
                       </p>
                     </div>
                   </div>
-                  <div className=" w-full flex items-center justify-center bg-gradient-to-r from-cyan-200 to-sky-400 h-[5.625rem] border border-[#DCDCDC] rounded-full">
-                    <button className=" font-medium text-2xl text-white">
+                  <button className=" w-full flex items-center justify-center group-hover:bg-gradient-to-r group-hover:from-cyan-200 group-hover:to-sky-400 h-[5.625rem] border border-[#DCDCDC] rounded-full">
+                    <div className=" font-medium text-2xl group-hover:text-white">
                       Get Started
-                    </button>
-                  </div>
+                    </div>
+                  </button>
                 </div>
               </div>
-              <div className=" w-[28.125rem] border border-[#DCDCDC] rounded-3xl">
+              <div className=" w-[28.125rem] border group hover:-translate-y-10 hover:shadow-2xl hover:shadow-sky-500 hover:bg-sky-200/5 duration-500 border-[#DCDCDC] rounded-3xl">
                 <div className=" flex flex-row items-center p-10 justify-between">
                   <div>
                     <p className=" font-bold text-xl">Standard</p>
                   </div>
-                  <div className=" w-36 h-14 rounded-full bg-black flex items-center justify-center">
-                    <button className=" font-semibold text-xl text-white">
+                  <button className=" w-36 h-14 rounded-full bg-black group-hover:bg-[#048FDE] flex items-center justify-center">
+                    <div className=" font-semibold text-xl text-white">
                       Save 20%
-                    </button>
-                  </div>
+                    </div>
+                  </button>
                 </div>
                 <div className=" flex flex-row items-center justify-between p-10 border-b border-t border-[#DCDCDC]">
                   <p className=" font-extrabold text-3xl">$7.99/m</p>
@@ -1085,11 +1012,11 @@ function Product() {
                       </p>
                     </div>
                   </div>
-                  <div className=" w-full flex items-center justify-center h-[5.625rem] border border-[#DCDCDC] rounded-full">
-                    <button className=" font-medium text-2xl">
+                  <button className=" w-full flex items-center justify-center h-[5.625rem] border group-hover:bg-gradient-to-r group-hover:from-cyan-200 group-hover:to-sky-400 border-[#DCDCDC] rounded-full">
+                    <div className=" font-medium group-hover:text-white text-2xl">
                       Get Started
-                    </button>
-                  </div>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>

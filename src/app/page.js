@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 import dashboard from "../assets/dashboard.png";
 import airbnb from "../assets/airbnb.png";
 import amazon from "../assets/amazon.png";
@@ -14,31 +13,31 @@ import blog1 from "../assets/blog1.png";
 import blog2 from "../assets/blog2.png";
 import blog3 from "../assets/blog3.png";
 import PropTypes from "prop-types";
-// import Ourteam from "./Ourteam";
-import PublishImg from '../assets/Publish.png';
-import RespondImg from '../assets/Respond.png';
-import AutomateImg from '../assets/Automate.png';
-import MonitorImg from '../assets/Monitor.png';
-import AnalyzeImg from '../assets/Analyze.png';
-import CreativeContentImg from '../assets/Creative Content.png';
+import PublishImg from "../assets/Publish.png";
+import RespondImg from "../assets/Respond.png";
+import AutomateImg from "../assets/Automate.png";
+import MonitorImg from "../assets/Monitor.png";
+import AnalyzeImg from "../assets/Analyze.png";
+import CreativeContentImg from "../assets/Creative Content.png";
 import Ourteam from "@/components/ourteam";
 
 const Card = ({ title, image, heading, description }) => (
-  <div className="bg-white border-2 w-[30rem] px-10 py-10 h-[27rem] rounded-2xl m-2">
-    <h3 className="text-xl text-[#002548] bg-[#F6F6F6] w-[12rem] text-center rounded-full font-semibold mb-2">
-      {title}
-    </h3>
-    <p className=" mt-10 font-extrabold text-2xl w-[12em] text-[#002548]">
-      {heading}
-    </p>
-    <p className=" mt-5 text-[#808080] w-[19em] text-xl">{description}</p>
-    <div className=" border-t-2 border-[#DCDCDC] mt-10">
-      <div className=" h-[4.7rem] mt-4 flex flex-row items-center justify-between">
-        <div>
-          <Image src={image} alt="" />
-        </div>
-        <div className=" h-[4rem] w-[13.8rem] border-2 rounded-full text-[#002548] font-semibold hover:font-bold hover:text-white hover:bg-[#002548] text-2xl flex items-center justify-center">
-          Get Started
+  <div className="group relative">
+  <div className=" absolute inset-3 duration-1000 opacity-75 group-hover:bg-gradient-to-br group-hover:animate-till group-hover:from-sky-500 group-hover:to-purple-500 rounded-2xl group-hover:blur-xl "></div>
+    <div className=" relative bg-white  border-2  px-10 py-10  rounded-2xl m-2">
+      <h3 className="text-xl text-[#002548] bg-[#F6F6F6] group-hover:bg-sky-300/30 duration-700 w-[13rem] text-center rounded-full font-semibold mb-2">
+        {title}
+      </h3>
+      <p className=" mt-10 font-extrabold text-2xl text-[#002548]">{heading}</p>
+      <p className=" mt-5 text-[#808080] text-xl">{description}</p>
+      <div className=" border-t-2 border-[#DCDCDC] mt-10">
+        <div className=" h-[4.7rem] mt-4 flex flex-row items-center justify-between">
+          <div>
+            <Image src={image} alt="" />
+          </div>
+          <div className=" h-[4rem] w-[13.8rem] border-2 rounded-full text-[#002548] font-semibold hover:font-bold group-hover:text-white group-hover:bg-[#002548] duration-500 text-2xl flex items-center justify-center">
+            Get Started
+          </div>
         </div>
       </div>
     </div>
@@ -99,19 +98,23 @@ const Home = () => {
     },
   ];
 
-
   return (
     <main>
       <section id="hero">
-        <div className="flex font-montserrat mt-10">
-          <div>
-            <div className="h-[35.2rem] w-[57.65rem] ml-[7.63rem] flex flex-col gap-[3.13rem] pr-24 overflow-hidden">
+        <div className="flex flex-col items-center justify-center gap-10 h-auto xl:gap-0 xl:flex-row font-montserrat mx-10 mt-10">
+          <div className=" relative lg:ml-[7.63rem] ml-10">
+            <div className=" absolute top-40 left-14 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob"></div>
+            <div className=" absolute top-28 right-72 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-2000"></div>
+            <div className=" absolute bottom-32 left-56 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-4000"></div>
+            <div className=" relative flex flex-col gap-[3.13rem]">
               <div>
-                <h1 className=" font-bold text-7xl text-[#002548] leading-tight">
+                <h1 className=" font-semibold md:font-bold text-4xl md:text-7xl text-[#002548] leading-tight">
                   <span className="bg-gradient-to-r from-[#0094FF] via-[#25CBFF] to-[#20FFCA] inline-block text-transparent bg-clip-text">
                     Develop Features,
+                    <br />
                   </span>{" "}
-                  Foster Collaboration & Knowledge Sharing
+                  <br />
+                  Foster Collaboration <br /> & Knowledge Sharing
                 </h1>
               </div>
               <div>
@@ -143,7 +146,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row gap-16 ml-[7.63rem]">
+            <div className="flex relative flex-row flex-wrap gap-16 mt-10">
               <div>
                 <Image src={google} alt="" />
               </div>
@@ -161,7 +164,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className=" h-[46.13rem] w-[67.313rem]">
+          <div className=" w-1/2 h-auto ">
             <Image src={dashboard} alt="" />
           </div>
         </div>
@@ -171,7 +174,7 @@ const Home = () => {
           <h1 className=" text-center font-extrabold text-5xl text-[#002548]">
             Simple, yet Powerful Features
           </h1>
-          <div className="container mt-10 mx-auto p-4">
+          <div className=" relative container mt-10 mx-auto p-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {cards.map((card, index) => (
                 <Card
@@ -187,8 +190,8 @@ const Home = () => {
         </div>
       </section>
       <section id="mission">
-        <div className="my-10 mx-20 font-montserrat flex flex-row justify-center gap-5">
-          <div className="w-[44rem] mt-5 flex flex-col gap-5">
+        <div className="my-10 mx-20 font-montserrat flex flex-col lg:flex-row justify-center gap-20 lg:gap-5">
+          <div className=" w-auto sm:w-[30rem] md:w-[35rem] lg:w-[40rem] xl:w-[44rem] mt-5 flex flex-col gap-5">
             <div className="flex flex-col gap-5 ">
               <div>
                 <h1 className="text-[#002548] text-6xl font-extrabold">
@@ -218,7 +221,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-row gap-5">
+          <div className="flex flex-col md:flex-row gap-5">
             <div>
               <Image src={mission1} alt="" className="h-[25rem] w-auto" />
             </div>
@@ -229,10 +232,10 @@ const Home = () => {
         </div>
       </section>
       <section id="working_process">
-        <div className=" flex flex-row font-montserrat justify-center my-20">
-          <div className="w-[35rem] h-[38rem] mr-5">
+        <div className=" flex flex-col lg:flex-row font-montserrat items-center gap-10 lg:gap-0 lg:items-stretch justify-center mx-10 h-auto my-20">
+          <div className="lg:w-[35rem] w-auto ml-10 lg:ml-0 h-auto mr-5 flex items-center justify-center">
             <div className="bg-cover bg-center bg-[url('https://i.ibb.co/V26NFdR/Background1.png')] rounded-3xl pl-5 w-full h-full flex items-center justify-center">
-              <div className="w-[32rem] h-auto">
+              <div className="w-auto h-auto">
                 <div className="flex p-10 flex-col gap-10">
                   <div>
                     <h1 className="text-[#FFFFFF] text-5xl font-extrabold">
@@ -254,7 +257,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="w-[56.5rem] h-[38rem] ml-5">
+          <div className=" w-auto lg:w-[56.5rem] h-auto ml-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-4">
               <div className=" flex flex-col items-start gap-6 justify-center">
                 <h1 className=" font-black text-5xl text-[#002548]">01</h1>
@@ -287,7 +290,7 @@ const Home = () => {
                 </p>
               </div>
               <div className=" flex flex-col items-start gap-6 justify-center">
-                <h1 className=" font-black text-5xl text-[#002548]">01</h1>
+                <h1 className=" font-black text-5xl text-[#002548]">04</h1>
                 <p className=" font-bold text-4xl text-[#002548]">
                   Publish & get your planning on point
                 </p>
@@ -302,9 +305,9 @@ const Home = () => {
       </section>
       <Ourteam />
       <section id="blog">
-        <div className=" font-montserrat my-16">
-          <div className="flex flex-row items-center text-[#002548] justify-around">
-            <div className=" w-[55rem] flex flex-col gap-5">
+        <div className=" font-montserrat my-16 mx-10">
+          <div className="flex flex-col gap-5 lg:gap-0 lg:flex-row items-start lg:items-center text-[#002548] justify-around">
+            <div className=" lg:w-[55rem] flex flex-col gap-5">
               <div>
                 <h1 className=" font-extrabold text-6xl">
                   Latest News and Articles
@@ -324,7 +327,7 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-row items-center justify-center gap-16 mt-10">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-16 mt-10">
             <div className="max-w-sm">
               <figure className="relative max-w-sm transition-all duration-300  filter grayscale-[30%] hover:grayscale-0">
                 <Image
@@ -334,10 +337,10 @@ const Home = () => {
                 />
                 <figcaption className="absolute px-4 bottom-3">
                   <div className="flex flex-row gap-2">
-                    <p className=" h-[2.5rem] w-[9rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl text-[#002548]">
+                    <p className=" h-[2.5rem] w-[9rem] lg:w-[7rem] xl:w-[9rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl lg:text-xl xl:text-2xl text-[#002548]">
                       Analyze
                     </p>
-                    <p className=" h-[2.5rem] w-[10rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl text-[#002548]">
+                    <p className=" h-[2.5rem] w-[9rem] lg:w-[7rem] xl:w-[10rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl lg:text-xl xl:text-2xl text-[#002548]">
                       Marketing
                     </p>
                   </div>
@@ -372,7 +375,7 @@ const Home = () => {
                 />
                 <figcaption className="absolute px-4 bottom-3">
                   <div className="flex flex-row gap-2">
-                    <p className=" h-[2.5rem] w-[9rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl text-[#002548]">
+                    <p className=" h-[2.5rem] w-[9rem] lg:w-[7rem] xl:w-[9rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl lg:text-xl xl:text-2xl text-[#002548]">
                       Analyze
                     </p>
                     {/* <p className=" h-[2.5rem] w-[10rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl text-[#002548]">
@@ -410,10 +413,10 @@ const Home = () => {
                 />
                 <figcaption className="absolute px-4 bottom-3">
                   <div className="flex flex-row gap-2">
-                    <p className=" h-[2.5rem] w-[9rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl text-[#002548]">
+                    <p className=" h-[2.5rem] w-[9rem] lg:w-[7rem] xl:w-[9rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl lg:text-xl xl:text-2xl text-[#002548]">
                       Analyze
                     </p>
-                    <p className=" h-[2.5rem] w-[10rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl text-[#002548]">
+                    <p className=" h-[2.5rem] w-[9rem] lg:w-[7rem] xl:w-[10rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl lg:text-xl xl:text-2xl text-[#002548]">
                       Marketing
                     </p>
                   </div>
@@ -443,8 +446,7 @@ const Home = () => {
         </div>
       </section>
     </main>
-  )
-}
+  );
+};
 
-export default Home
-
+export default Home;
