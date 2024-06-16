@@ -21,23 +21,34 @@ import AnalyzeImg from "../assets/Analyze.png";
 import CreativeContentImg from "../assets/Creative Content.png";
 import Ourteam from "@/components/ourteam";
 import { motion } from "framer-motion";
+import Button from "@/components/button";
 
 const Card = ({ title, image, heading, description }) => (
   <div className="group relative">
-  <div className=" absolute inset-3 duration-1000 opacity-75 group-hover:bg-gradient-to-br group-hover:animate-till group-hover:from-sky-500 group-hover:to-purple-500 rounded-2xl group-hover:blur-xl "></div>
+    <div className=" absolute inset-3 duration-1000 opacity-75 group-hover:bg-gradient-to-br group-hover:animate-till group-hover:from-sky-500 group-hover:to-purple-500 rounded-2xl group-hover:blur-xl "></div>
     <div className=" relative bg-white  border-2  px-10 py-10  rounded-2xl m-2">
-      <h3 className="text-xl text-[#002548] bg-[#F6F6F6] group-hover:bg-sky-300/30 duration-700 w-[13rem] text-center rounded-full font-semibold mb-2">
-        {title}
-      </h3>
-      <p className=" mt-10 font-extrabold text-2xl text-[#002548]">{heading}</p>
-      <p className=" mt-5 text-[#808080] text-xl">{description}</p>
+      <div className=" mx-auto flex items-start">
+        <h3 className="text-xl text-[#002548] bg-[#F6F6F6] group-hover:bg-sky-300/30 p-5 duration-700 text-center rounded-full font-semibold mb-2">
+          {title}
+        </h3>
+      </div>
+      <div>
+        <p className=" mt-10 font-extrabold text-2xl text-[#002548]">
+          {heading}
+        </p>
+      </div>
+      <div>
+        <p className=" mt-5 text-[#808080] text-xl">{description}</p>
+      </div>
       <div className=" border-t-2 border-[#DCDCDC] mt-10">
         <div className=" h-[4.7rem] mt-4 flex flex-row items-center justify-between">
           <div>
             <Image src={image} alt="" />
           </div>
-          <div className=" h-[4rem] w-[13.8rem] border-2 rounded-full text-[#002548] font-semibold hover:font-bold group-hover:text-white group-hover:bg-[#002548] duration-500 text-2xl flex items-center justify-center">
-            Get Started
+          <div>
+            <button className=" relative rounded-full h-[4rem] w-[13.8rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-white px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+              <span className="relative z-10">Get Started</span>
+            </button>
           </div>
         </div>
       </div>
@@ -104,9 +115,9 @@ const Home = () => {
       <section id="hero">
         <div className="flex flex-col items-center justify-center gap-10 h-auto xl:gap-0 xl:flex-row font-montserrat mx-10 mt-10">
           <div className=" relative lg:ml-[7.63rem] ml-10">
-            <div className=" absolute top-40 left-14 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob"></div>
-            <div className=" absolute top-28 right-72 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-2000"></div>
-            <div className=" absolute bottom-32 left-56 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-4000"></div>
+            <div className=" absolute top-40 left-14 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-blob"></div>
+            <div className=" absolute top-28 right-72 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-blob animation-delay-2000"></div>
+            <div className=" absolute bottom-32 left-56 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-blob animation-delay-4000"></div>
             <div className=" relative flex flex-col gap-[3.13rem]">
               <div>
                 <h1 className=" font-semibold md:font-bold text-4xl md:text-7xl text-[#002548] leading-tight">
@@ -124,28 +135,7 @@ const Home = () => {
                   serves as a hub for endless opportunities.
                 </p>
               </div>
-              <div className="h-[4.4rem] w-[15.5rem] rounded-full bg-gradient-to-br from-[#76CDFF] to-[#008DDD] flex items-center justify-between px-3">
-                <div className=" text-lg font-bold text-white pl-5">
-                  Get a demo
-                </div>
-                <div className="bg-[#002548] h-[3.13rem] w-[3.13rem] rounded-full flex items-center justify-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="14"
-                    viewBox="0 0 18 14"
-                    fill="#FFFFFF"
-                  >
-                    <path
-                      d="M1 7L17 7M17 7L11 13M17 7L11 1"
-                      stroke="white"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
+              <Button />
             </div>
             <div className="flex relative flex-row flex-wrap gap-16 mt-10">
               <div>
@@ -250,8 +240,8 @@ const Home = () => {
                     </p>
                   </div>
                   <div>
-                    <button className=" h-[4.688rem] w-[14.875rem]  bg-white rounded-full font-medium text-2xl text-[#002548]">
-                      Get Started
+                    <button className=" relative rounded-full h-[4.688rem] w-[14.875rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-white px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                      <span className="relative z-10">Get Started</span>
                     </button>
                   </div>
                 </div>
@@ -323,8 +313,8 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <button className=" h-[4.688rem] w-[17.313rem] bg-white rounded-full border border-[#DCDCDC] font-medium text-2xl text-[#002548]">
-                See More News
+              <button className=" relative rounded-full h-[4.688rem] w-[17.313rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-white px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                <span className="relative z-10">See More News</span>
               </button>
             </div>
           </div>

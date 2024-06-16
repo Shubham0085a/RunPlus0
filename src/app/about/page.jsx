@@ -78,7 +78,9 @@ const About = () => {
         <div className=" mx-20 my-5">
           <div className="bg-cover bg-center bg-[url('https://i.ibb.co/C5hVCqf/background3.png')] flex items-center justify-center font-montserrat rounded-2xl text-[#FFFFFF]">
             <div className="w-11/12 sm:w-3/4 flex flex-col my-20 gap-5 items-center justify-center">
-              <h1 className=" font-semibold text-3xl sm:font-extrabold sm:text-5xl lg:text-7xl">About Us</h1>
+              <h1 className=" font-semibold text-3xl sm:font-extrabold sm:text-5xl lg:text-7xl">
+                About Us
+              </h1>
               <p className=" text-center font-medium text-2xl sm:text-3xl">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
@@ -95,7 +97,9 @@ const About = () => {
             </div>
             <div className="flex flex-row flex-wrap lg:flex-nowrap gap-8">
               <div className="bg-gradient-to-r lg:w-1/3 from-sky-200 to-sky-500 h-56 lg:h-32 xl:h-56 flex flex-col items-center justify-center rounded-3xl">
-                <p className="font-extrabold lg:font-bold lg:text-5xl xl:text-7xl xl:font-extralight text-7xl text-white">500K</p>
+                <p className="font-extrabold lg:font-bold lg:text-5xl xl:text-7xl xl:font-extralight text-7xl text-white">
+                  500K
+                </p>
                 <p className=" font-bold text-xl lg:text-lg xl:text-xl text-white">
                   Daily Active Users
                 </p>
@@ -192,9 +196,14 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className=" bg-[#002548] h-[4.5rem] w-60 flex items-center justify-center rounded-full">
+            {/* <div className=" bg-[#002548] h-[4.5rem] w-60 flex items-center justify-center rounded-full">
               <button className=" font-semibold text-2xl text-white">
                 Join our Team
+              </button>
+            </div> */}
+            <div>
+              <button className=" relative rounded-full bg-[#002548] text-white h-[4.5rem] w-60 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                <span className="relative z-10">Join our Team</span>
               </button>
             </div>
           </div>
@@ -279,7 +288,7 @@ const About = () => {
                 <div className=" bg-[#F6F6F6]">
                   <div className="flex flex-col gap-4 py-12 px-10 lg:px-24">
                     <p className=" font-extrabold text-4xl text-[#2F2F2F]">
-                    Ini<span className="text-[#5571FF]">_</span>tech
+                      Ini<span className="text-[#5571FF]">_</span>tech
                     </p>
                     <p className=" font-normal text-2xl text-[#808080]">
                       One of a select group of Facebook Marketing Partners in
@@ -293,12 +302,12 @@ const About = () => {
                 <div className=" bg-[#F6F6F6]">
                   <div className="flex flex-col gap-4 py-12 px-10 lg:px-24">
                     <p className=" font-extrabold text-5xl">
-                    <span className="text-[#4285F4]">G</span>
-                    <span className="text-[#EA4335]">o</span>
-                    <span className="text-[#FBBC03]">o</span>
-                    <span className="text-[#4285F4]">g</span>
-                    <span className="text-[#31C65B]">l</span>
-                    <span className="text-[#EA4335]">e</span>
+                      <span className="text-[#4285F4]">G</span>
+                      <span className="text-[#EA4335]">o</span>
+                      <span className="text-[#FBBC03]">o</span>
+                      <span className="text-[#4285F4]">g</span>
+                      <span className="text-[#31C65B]">l</span>
+                      <span className="text-[#EA4335]">e</span>
                     </p>
                     <p className=" font-normal text-2xl text-[#808080]">
                       One of a select group of Facebook Marketing Partners in
@@ -310,7 +319,7 @@ const About = () => {
                 <div className=" bg-[#F6F6F6]">
                   <div className="flex flex-col gap-4 py-12 px-10 lg:px-24">
                     <p className=" font-extrabold text-4xl text-[#FF6565]">
-                    Umbre<span className="text-[#7C3EFF]">lla</span>
+                      Umbre<span className="text-[#7C3EFF]">lla</span>
                     </p>
                     <p className=" font-normal text-2xl text-[#808080]">
                       One of a select group of Facebook Marketing Partners in

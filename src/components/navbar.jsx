@@ -82,7 +82,7 @@ const Navbar = () => {
               >
                 <Link
                   href="/"
-                  className="hover:font-semibold text-xl bold text-[#002548] relative linear-mask items-center justify-center rounded-full bg-white flex w-full h-full"
+                  className="hover:font-semibold text-xl bold text-[#002548] relative linear-mask items-center cu justify-center rounded-full bg-white flex w-full h-full"
                 >
                   Contact Us
                 </Link>
