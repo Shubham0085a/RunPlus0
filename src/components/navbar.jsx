@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import logo from "../assets/RunPlus - Logo.png";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -58,14 +59,35 @@ const Navbar = () => {
               </Link>
             </PopoverGroup>
             <div className="hidden lg:flex lg:flex-1 gap-5 lg:justify-end">
-              <div className="bg-gradient-to-r from-[#6BDBFF] to-[#009CDD] border-2 rounded-full w-52 h-16 p-[0.125rem]">
+              <motion.div
+                className=" relative border-2 radial-gradient rounded-full w-52 h-16 p-[0.125rem]"
+                initial={{ "--x": "100%" }}
+                animate={{ "--x": "-100%" }}
+                whileTap={{ scale: 0.97 }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  repeatDelay: 1,
+                  type: "spring",
+                  stiffness: 20,
+                  damping: 15,
+                  mass: 2,
+                  scale: {
+                    type: "spring",
+                    stiffness: 10,
+                    damping: 5,
+                    mass: 0.1,
+                  }
+                }}
+              >
                 <Link
-                  href="/footer"
-                  className="hover:font-semibold text-xl bold text-[#002548] items-center justify-center rounded-full bg-white flex w-full h-full"
+                  href="/"
+                  className="hover:font-semibold text-xl bold text-[#002548] relative linear-mask items-center justify-center rounded-full bg-white flex w-full h-full"
                 >
                   Contact Us
                 </Link>
-              </div>
+                <span className=" block absolute inset-0 rounded-full p-px"/>
+              </motion.div>
             </div>
           </div>
         </nav>
@@ -113,14 +135,14 @@ const Navbar = () => {
                   </Link>
                 </div>
                 <div className="py-6">
-                <div className="bg-gradient-to-r from-[#6BDBFF] to-[#009CDD] border-2 rounded-full w-52 h-16 p-[0.125rem]">
-                <Link
-                  href="/footer"
-                  className="hover:font-semibold text-xl bold text-[#002548] items-center justify-center rounded-full bg-white flex w-full h-full"
-                >
-                  Contact Us
-                </Link>
-              </div>
+                  <div className="bg-gradient-to-r from-[#6BDBFF] to-[#009CDD] border-2 rounded-full w-52 h-16 p-[0.125rem]">
+                    <Link
+                      href="/footer"
+                      className="hover:font-semibold text-xl bold text-[#002548] items-center justify-center rounded-full bg-white flex w-full h-full"
+                    >
+                      Contact Us
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

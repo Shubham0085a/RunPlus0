@@ -20,6 +20,7 @@ import MonitorImg from "../assets/Monitor.png";
 import AnalyzeImg from "../assets/Analyze.png";
 import CreativeContentImg from "../assets/Creative Content.png";
 import Ourteam from "@/components/ourteam";
+import { motion } from "framer-motion";
 
 const Card = ({ title, image, heading, description }) => (
   <div className="group relative">
@@ -249,7 +250,7 @@ const Home = () => {
                     </p>
                   </div>
                   <div>
-                    <button className=" h-[4.688rem] w-[14.875rem] bg-white rounded-full font-medium text-2xl text-[#002548]">
+                    <button className=" h-[4.688rem] w-[14.875rem]  bg-white rounded-full font-medium text-2xl text-[#002548]">
                       Get Started
                     </button>
                   </div>
