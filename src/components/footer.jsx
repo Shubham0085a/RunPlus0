@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <section id="footer">
       <div className=" font-montserrat text-white flex flex-col bg-[#002548]">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10  mx-10 2xl:gap-16 mt-28 mb-10">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10  mx-10 2xl:gap-16 mt-2 mb-10">
         <div className="flex flex-col sm:flex-row gap-36 lg:gap-10  mx-10 2xl:gap-16 lg:mt-28 mb-10">
           <div className=" max-w-sm">
             <Image src={Footerlogo} alt="" />
