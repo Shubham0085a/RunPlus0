@@ -27,7 +27,7 @@ const Ourteam = () => {
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-12 py-12">
           <div className="">
-            <div>
+            <div className=" w-[27rem] h-[31rem]">
               <Image src={Manjunath} alt="" />
             </div>
             <div className=" flex flex-col gap-5 mt-5">
@@ -74,7 +74,7 @@ const Ourteam = () => {
             </div>
           </div>
           <div>
-            <div>
+            <div className=" w-[27rem] h-[31rem]">
               <Image src={Prashanthi} alt="" />
             </div>
             <div className=" flex flex-col gap-5 mt-5">
@@ -121,7 +121,7 @@ const Ourteam = () => {
             </div>
           </div>
           <div>
-            <div>
+            <div className=" w-[27rem] h-[31rem]">
               <Image src={Raghunath} alt="" />
             </div>
             <div className=" flex flex-col gap-5 mt-5">

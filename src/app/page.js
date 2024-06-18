@@ -22,6 +22,7 @@ import CreativeContentImg from "../assets/Creative Content.png";
 import Ourteam from "@/components/ourteam";
 import { motion } from "framer-motion";
 import Button from "@/components/button";
+import Marquee from "react-fast-marquee";
 
 const Card = ({ title, image, heading, description }) => (
   <div className="group relative">
@@ -42,7 +43,7 @@ const Card = ({ title, image, heading, description }) => (
       </div>
       <div className=" border-t-2 border-[#DCDCDC] mt-10">
         <div className=" h-[4.7rem] mt-4 flex flex-row items-center justify-between">
-          <div>
+          <div className=" h-16 w-16">
             <Image src={image} alt="" />
           </div>
           <div>
@@ -114,10 +115,10 @@ const Home = () => {
     <main>
       <section id="hero">
         <div className="flex flex-col items-center justify-center gap-10 h-auto xl:gap-0 xl:flex-row font-montserrat mx-10 mt-10">
-          <div className=" relative lg:ml-[7.63rem] ml-10">
-            <div className=" absolute top-40 left-14 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-blob"></div>
-            <div className=" absolute top-28 right-72 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-blob animation-delay-2000"></div>
-            <div className=" absolute bottom-32 left-56 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-blob animation-delay-4000"></div>
+          <div className=" relative lg:ml-[7.63rem] w-4/5 xl:w-[55%] ml-10">
+            <div className=" absolute top-40 left-14 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-purple-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob"></div>
+            <div className=" absolute top-28 right-72 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-yellow-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob animation-delay-2000"></div>
+            <div className=" absolute bottom-32 left-56 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-pink-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob animation-delay-4000"></div>
             <div className=" relative flex flex-col gap-[3.13rem]">
               <div>
                 <h1 className=" font-semibold md:font-bold text-4xl md:text-7xl text-[#002548] leading-tight">
@@ -137,25 +138,27 @@ const Home = () => {
               </div>
               <Button />
             </div>
-            <div className="flex relative flex-row flex-wrap gap-16 mt-16">
-              <div>
+            <div className=" w-[90%] h-full">
+            <Marquee behavior="" direction="left" autoFill={true} gradient={true} className="relative mt-12">
+              <div className="mr-14 w-28 ">
                 <Image src={google} alt="" />
               </div>
-              <div>
+              <div className="mr-14 w-28 ">
                 <Image src={airbnb} alt="" />
               </div>
-              <div>
+              <div className="mr-14 w-28">
                 <Image src={creative} alt="" />
               </div>
-              <div>
+              <div className="mr-14 w-32 ">
                 <Image src={shopify} alt="" />
               </div>
-              <div>
+              <div className="mr-14 w-28 ">
                 <Image src={amazon} alt="" />
               </div>
+            </Marquee>
             </div>
           </div>
-          <div className=" w-1/2 h-auto ">
+          <div className=" w-[40%] h-auto ">
             <Image src={dashboard} alt="" />
           </div>
         </div>

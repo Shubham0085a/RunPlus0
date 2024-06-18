@@ -12,7 +12,7 @@ import Image from "next/image";
 import Ourteam from "@/components/ourteam";
 
 const Card = ({ image, heading, description }) => (
-  <div className="bg-white hover:bg-[#EDEEF0] flex items-center justify-center font-montserrat hover:shadow-md hover:border px-10 py-10 h-[28rem] rounded-2xl">
+  <div className="bg-white hover:bg-[#EDEEF0] flex items-center justify-center m-1 font-montserrat hover:shadow-md hover:border px-10 py-10 h-[28rem] rounded-2xl">
     <div className=" flex flex-col gap-10 items-center justify-center">
       <div>
         <Image src={image} alt="" />
