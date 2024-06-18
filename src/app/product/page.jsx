@@ -10,16 +10,19 @@ import Image from "next/image";
 import Slider from "@/components/slider";
 
 const Card = ({ image, heading, description }) => (
-  <div className="hover:bg-white bg-[#EDEEF0] flex items-center justify-center font-montserrat hover:shadow-md border px-10 py-10 rounded-2xl">
-    <div className=" w-[25rem] h-[21.50rem] flex flex-col gap-10 items-start justify-center">
-      <div>
-        <Image src={image} alt="" />
-      </div>
-      <div>
-        <h1 className=" font-bold text-3xl">{heading}</h1>
-      </div>
-      <div>
-        <p className=" font-normal text-2xl">{description}</p>
+  <div className="group relative">
+  <div className=" absolute inset-3 duration-1000 opacity-75 group-hover:bg-gradient-to-br group-hover:animate-till group-hover:from-[#008DDD] group-hover:to-purple-500 rounded-2xl group-hover:blur-xl "></div>
+    <div className="hover:bg-white relative bg-[#EDEEF0] flex items-center justify-center m-3 font-montserrat hover:shadow-md border px-10 py-10 rounded-2xl">
+      <div className=" w-[25rem] h-[21.50rem] flex flex-col gap-10 items-start justify-center">
+        <div>
+          <Image src={image} alt="" />
+        </div>
+        <div>
+          <h1 className=" font-bold text-3xl">{heading}</h1>
+        </div>
+        <div>
+          <p className=" font-normal text-2xl">{description}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -234,7 +237,7 @@ function Product() {
               </div>
             </div>
             <div>
-              <button className=" relative rounded-full h-[4.4rem] w-[17rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-gradient-to-r from-sky-500 to-sky-200 px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+              <button className=" relative rounded-full h-[4.4rem] w-[17rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-gradient-to-r from-[#008DDD] to-[#76CDFF] px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#002548] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                 <span className="relative z-10">100% Safe to Use</span>
               </button>
             </div>
@@ -473,13 +476,13 @@ function Product() {
               </p>
             </div>
             <div className=" flex flex-row flex-wrap lg:flex-nowrap items-center justify-center mt-10 gap-10">
-              <div className=" w-[28.125rem] group hover:-translate-y-10 duration-500 hover:shadow-2xl hover:shadow-sky-500 hover:bg-sky-200/5 border border-[#DCDCDC] rounded-3xl">
+              <div className=" w-[28.125rem] group hover:-translate-y-10 duration-500 hover:shadow-2xl hover:shadow-[#008DDD] hover:bg-sky-200/5 border border-[#DCDCDC] rounded-3xl">
                 <div className=" flex flex-row items-center p-10 justify-between">
                   <div>
                     <p className=" font-bold text-xl">STANDARD</p>
                   </div>
                   <div>
-                    <button className=" relative rounded-full bg-black text-white w-36 h-14 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full bg-black text-white w-36 h-14 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Save 20%</span>
                     </button>
                   </div>
@@ -650,19 +653,19 @@ function Product() {
                     </div>
                   </div>
                   <div>
-                    <button className=" relative rounded-full w-full h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full w-full h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Get Started</span>
                     </button>
                   </div>
                 </div>
               </div>
-              <div className=" w-[28.125rem] border group hover:-translate-y-10 hover:shadow-2xl hover:shadow-sky-500 hover:bg-sky-200/5 duration-500 border-[#DCDCDC] rounded-3xl">
+              <div className=" w-[28.125rem] border group hover:-translate-y-10 hover:shadow-2xl hover:shadow-[#008DDD] hover:bg-sky-200/5 duration-500 border-[#DCDCDC] rounded-3xl">
                 <div className=" flex flex-row items-center p-10 justify-between">
                   <div>
                     <p className=" font-bold text-xl">PREMIUM</p>
                   </div>
                   <div>
-                    <button className=" relative rounded-full bg-black text-white w-36 h-14 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full bg-black text-white w-36 h-14 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Popular</span>
                     </button>
                   </div>
@@ -831,19 +834,19 @@ function Product() {
                     </div>
                   </div>
                   <div>
-                    <button className=" relative rounded-full w-full h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full w-full h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Get Started</span>
                     </button>
                   </div>
                 </div>
               </div>
-              <div className=" w-[28.125rem] border group hover:-translate-y-10 hover:shadow-2xl hover:shadow-sky-500 hover:bg-sky-200/5 duration-500 border-[#DCDCDC] rounded-3xl">
+              <div className=" w-[28.125rem] border group hover:-translate-y-10 hover:shadow-2xl hover:shadow-[#008DDD] hover:bg-sky-200/5 duration-500 border-[#DCDCDC] rounded-3xl">
                 <div className=" flex flex-row items-center p-10 justify-between">
                   <div>
                     <p className=" font-bold text-xl">Standard</p>
                   </div>
                   <div>
-                    <button className=" relative rounded-full bg-black text-white w-36 h-14 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full bg-black text-white w-36 h-14 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Save 20%</span>
                     </button>
                   </div>
@@ -1012,7 +1015,7 @@ function Product() {
                     </div>
                   </div>
                   <div>
-                    <button className=" relative rounded-full w-full h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full w-full h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Get Started</span>
                     </button>
                   </div>

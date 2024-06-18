@@ -28,7 +28,7 @@ const Card = ({ title, image, heading, description }) => (
     <div className=" absolute inset-3 duration-1000 opacity-75 group-hover:bg-gradient-to-br group-hover:animate-till group-hover:from-sky-500 group-hover:to-purple-500 rounded-2xl group-hover:blur-xl "></div>
     <div className=" relative bg-white  border-2  px-10 py-10  rounded-2xl m-2">
       <div className=" mx-auto flex items-start">
-        <h3 className="text-xl text-[#002548] bg-[#F6F6F6] group-hover:bg-sky-300/30 p-5 duration-700 text-center rounded-full font-semibold mb-2">
+        <h3 className="text-xl text-[#002548] bg-[#F6F6F6] group-hover:bg-sky-300/30 py-3 px-7 duration-700 text-center rounded-full font-semibold mb-2">
           {title}
         </h3>
       </div>
@@ -46,7 +46,7 @@ const Card = ({ title, image, heading, description }) => (
             <Image src={image} alt="" />
           </div>
           <div>
-            <button className=" relative rounded-full h-[4rem] w-[13.8rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-white px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+            <button className=" relative rounded-full h-[4rem] w-[13.8rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-gradient-to-r from-[#76CDFF] to-[#008DDD] px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#002548] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
               <span className="relative z-10">Get Started</span>
             </button>
           </div>
@@ -67,7 +67,7 @@ const Home = () => {
   const cards = [
     {
       title: "Publish",
-      heading: "Save time by scheduling posts",
+      heading: "Save your valuable time by scheduling posts",
       image: PublishImg,
       description:
         "Building an enterprisedoesn't need nightmare or cost your thousands. Felix is purpose built.",
@@ -137,7 +137,7 @@ const Home = () => {
               </div>
               <Button />
             </div>
-            <div className="flex relative flex-row flex-wrap gap-16 mt-10">
+            <div className="flex relative flex-row flex-wrap gap-16 mt-16">
               <div>
                 <Image src={google} alt="" />
               </div>
@@ -161,8 +161,8 @@ const Home = () => {
         </div>
       </section>
       <section id="features">
-        <div className=" font-montserrat my-16">
-          <h1 className=" text-center font-extrabold text-5xl text-[#002548]">
+        <div className=" font-montserrat my-24">
+          <h1 className=" text-center font-extrabold text-5xl mb-16 text-[#002548]">
             Simple, yet Powerful Features
           </h1>
           <div className=" relative container mt-10 mx-auto p-4">
@@ -328,10 +328,10 @@ const Home = () => {
                 />
                 <figcaption className="absolute px-4 bottom-3">
                   <div className="flex flex-row gap-2">
-                    <p className=" h-[2.5rem] w-[9rem] lg:w-[7rem] xl:w-[9rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl lg:text-xl xl:text-2xl text-[#002548]">
+                    <p className=" h-[2.2rem] w-[7rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-lg text-[#002548]">
                       Analyze
                     </p>
-                    <p className=" h-[2.5rem] w-[9rem] lg:w-[7rem] xl:w-[10rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl lg:text-xl xl:text-2xl text-[#002548]">
+                    <p className=" h-[2.2rem] w-[8rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-lg text-[#002548]">
                       Marketing
                     </p>
                   </div>
@@ -366,7 +366,7 @@ const Home = () => {
                 />
                 <figcaption className="absolute px-4 bottom-3">
                   <div className="flex flex-row gap-2">
-                    <p className=" h-[2.5rem] w-[9rem] lg:w-[7rem] xl:w-[9rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl lg:text-xl xl:text-2xl text-[#002548]">
+                    <p className=" h-[2.2rem] w-[7rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-lg text-[#002548]">
                       Analyze
                     </p>
                     {/* <p className=" h-[2.5rem] w-[10rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl text-[#002548]">
@@ -404,10 +404,10 @@ const Home = () => {
                 />
                 <figcaption className="absolute px-4 bottom-3">
                   <div className="flex flex-row gap-2">
-                    <p className=" h-[2.5rem] w-[9rem] lg:w-[7rem] xl:w-[9rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl lg:text-xl xl:text-2xl text-[#002548]">
+                    <p className=" h-[2.2rem] w-[7rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-lg text-[#002548]">
                       Analyze
                     </p>
-                    <p className=" h-[2.5rem] w-[9rem] lg:w-[7rem] xl:w-[10rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl lg:text-xl xl:text-2xl text-[#002548]">
+                    <p className=" h-[2.2rem] w-[8rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-lg text-[#002548]">
                       Marketing
                     </p>
                   </div>

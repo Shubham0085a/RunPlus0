@@ -196,11 +196,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-            {/* <div className=" bg-[#002548] h-[4.5rem] w-60 flex items-center justify-center rounded-full">
-              <button className=" font-semibold text-2xl text-white">
-                Join our Team
-              </button>
-            </div> */}
             <div>
               <button className=" relative rounded-full bg-[#002548] text-white h-[4.5rem] w-60 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                 <span className="relative z-10">Join our Team</span>

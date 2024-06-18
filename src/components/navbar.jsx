@@ -60,7 +60,7 @@ const Navbar = () => {
             </PopoverGroup>
             <div className="hidden lg:flex lg:flex-1 gap-5 lg:justify-end">
               <motion.div
-                className=" relative border-2 radial-gradient rounded-full w-52 h-16 p-[0.125rem]"
+                className=" relative border-2 radial-gradient cursor-pointer rounded-full w-52 h-16 p-[0.125rem]"
                 initial={{ "--x": "100%" }}
                 animate={{ "--x": "-100%" }}
                 whileTap={{ scale: 0.97 }}
@@ -77,7 +77,7 @@ const Navbar = () => {
                     stiffness: 10,
                     damping: 5,
                     mass: 0.1,
-                  }
+                  },
                 }}
               >
                 <Link
@@ -86,7 +86,7 @@ const Navbar = () => {
                 >
                   Contact Us
                 </Link>
-                <span className=" block absolute inset-0 rounded-full p-px"/>
+                <span className=" block absolute inset-0 rounded-full p-px" />
               </motion.div>
             </div>
           </div>
@@ -135,13 +135,10 @@ const Navbar = () => {
                   </Link>
                 </div>
                 <div className="py-6">
-                  <div className="bg-gradient-to-r from-[#6BDBFF] to-[#009CDD] border-2 rounded-full w-52 h-16 p-[0.125rem]">
-                    <Link
-                      href="/footer"
-                      className="hover:font-semibold text-xl bold text-[#002548] items-center justify-center rounded-full bg-white flex w-full h-full"
-                    >
-                      Contact Us
-                    </Link>
+                  <div>
+                    <button className=" relative rounded-full bg-white w-52 h-16 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                      <span className="relative z-10">Contact Us</span>
+                    </button>
                   </div>
                 </div>
               </div>
