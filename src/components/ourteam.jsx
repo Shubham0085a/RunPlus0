@@ -30,8 +30,8 @@ const Ourteam = () => {
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-12 py-12">
           <div className="">
-            <div data-tilt className=" w-[27rem] h-[31rem]">
-              <Image src={Manjunath} alt="" />
+            <div data-tilt>
+              <Image src={Manjunath} alt="" className="w-[27rem]"/>
             </div>
             <div className=" flex flex-col gap-5 mt-5">
               <p className=" font-bold text-3xl text-center">Manjunath</p>
@@ -77,8 +77,8 @@ const Ourteam = () => {
             </div>
           </div>
           <div>
-            <div data-tilt className=" w-[27rem] h-[31rem]">
-              <Image src={Prashanthi} alt="" />
+            <div data-tilt>
+              <Image src={Prashanthi} alt="" className="w-[27rem]"/>
             </div>
             <div className=" flex flex-col gap-5 mt-5">
               <p className=" font-bold text-3xl text-center">Prashanthi</p>
@@ -124,8 +124,8 @@ const Ourteam = () => {
             </div>
           </div>
           <div>
-            <div data-tilt className=" w-[27rem] h-[31rem]">
-              <Image src={Raghunath} alt="" />
+            <div data-tilt>
+              <Image src={Raghunath} alt="" className="w-[27rem]"/>
             </div>
             <div className=" flex flex-col gap-5 mt-5">
               <p className=" font-bold text-3xl text-center">Raghunath</p>

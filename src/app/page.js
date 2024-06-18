@@ -51,11 +51,11 @@ const Card = ({ title, image, heading, description }) => (
       </div>
       <div className=" border-t-2 border-[#DCDCDC] mt-10">
         <div className=" h-[4.7rem] mt-4 flex flex-row items-center justify-between">
-          <div className=" h-16 w-16">
-            <Image src={image} alt="" />
+          <div>
+            <Image src={image} alt="" className="w-16"/>
           </div>
           <div>
-            <button className=" relative rounded-full h-[4rem] w-[13.8rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-gradient-to-r from-[#76CDFF] to-[#008DDD] px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#002548] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+            <button className=" relative rounded-full h-[4rem] w-[13.8rem] sm:h-[3.5rem] sm:w-[9rem] xl:h-[4rem] xl:w-[13.8rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl sm:font-medium sm:hover:font-semibold sm:text-lg xl:font-semibold xl:hover:font-bold xl:text-2xl bg-gradient-to-r from-[#76CDFF] to-[#008DDD] px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#002548] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
               <span className="relative z-10">Get Started</span>
             </button>
           </div>
@@ -79,7 +79,7 @@ const Home = () => {
   const cards = [
     {
       title: "Publish",
-      heading: "Save your valuable time by scheduling posts",
+      heading: "Save valuable time by scheduling posts",
       image: PublishImg,
       description:
         "Building an enterprisedoesn't need nightmare or cost your thousands. Felix is purpose built.",
