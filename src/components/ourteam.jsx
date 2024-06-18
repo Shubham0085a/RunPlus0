@@ -1,9 +1,12 @@
+
 import Manjunath from "../assets/Manjunath.png";
 import Raghunath from "../assets/Raghunath.png";
 import Prashanthi from "../assets/Prashanthi.png";
 import Image from "next/image";
+import VanillaTilt from "vanilla-tilt";
 
 const Ourteam = () => {
+
   return (
     <section id="our_team">
       <div className="bg-cover bg-center bg-[url('https://i.ibb.co/gzJKtCJ/Background2.png')] pt-16 px-10 font-montserrat text-[#FFFFFF]">
@@ -27,7 +30,7 @@ const Ourteam = () => {
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-12 py-12">
           <div className="">
-            <div className=" w-[27rem] h-[31rem]">
+            <div data-tilt className=" w-[27rem] h-[31rem]">
               <Image src={Manjunath} alt="" />
             </div>
             <div className=" flex flex-col gap-5 mt-5">
@@ -74,7 +77,7 @@ const Ourteam = () => {
             </div>
           </div>
           <div>
-            <div className=" w-[27rem] h-[31rem]">
+            <div data-tilt className=" w-[27rem] h-[31rem]">
               <Image src={Prashanthi} alt="" />
             </div>
             <div className=" flex flex-col gap-5 mt-5">
@@ -121,7 +124,7 @@ const Ourteam = () => {
             </div>
           </div>
           <div>
-            <div className=" w-[27rem] h-[31rem]">
+            <div data-tilt className=" w-[27rem] h-[31rem]">
               <Image src={Raghunath} alt="" />
             </div>
             <div className=" flex flex-col gap-5 mt-5">

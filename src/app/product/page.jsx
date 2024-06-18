@@ -8,6 +8,7 @@ import SupportImg from "../../assets/support.png";
 import IntegratedImg from "../../assets/integrated.png";
 import Image from "next/image";
 import Slider from "@/components/slider";
+import VanillaTilt from "vanilla-tilt";
 
 const Card = ({ image, heading, description }) => (
   <div className="group relative">

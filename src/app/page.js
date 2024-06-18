@@ -1,5 +1,14 @@
+"use client";
 import Image from "next/image";
+import React, { useRef } from "react";
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
 
+import VanillaTilt from "vanilla-tilt";
 import dashboard from "../assets/dashboard.png";
 import airbnb from "../assets/airbnb.png";
 import amazon from "../assets/amazon.png";
@@ -20,7 +29,6 @@ import MonitorImg from "../assets/Monitor.png";
 import AnalyzeImg from "../assets/Analyze.png";
 import CreativeContentImg from "../assets/Creative Content.png";
 import Ourteam from "@/components/ourteam";
-import { motion } from "framer-motion";
 import Button from "@/components/button";
 import Marquee from "react-fast-marquee";
 
@@ -63,6 +71,9 @@ Card.propTypes = {
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 };
+
+const ROTATION_RANGE = 15;
+const HALF_ROTATION_RANGE = 15 / 2;
 
 const Home = () => {
   const cards = [
@@ -111,8 +122,41 @@ const Home = () => {
     },
   ];
 
+  const ref = useRef(null);
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const xSpring = useSpring(x);
+  const ySpring = useSpring(y);
+
+  const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
+
+  const handleMouseMove = (e) => {
+    if (!ref.current) return [0, 0];
+
+    const rect = ref.current.getBoundingClientRect();
+
+    const width = rect.width;
+    const height = rect.height;
+
+    const mouseX = (e.clientX - rect.left) * ROTATION_RANGE;
+    const mouseY = (e.clientY - rect.top) * ROTATION_RANGE;
+
+    const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1;
+    const rY = mouseX / width - HALF_ROTATION_RANGE;
+
+    x.set(rX);
+    y.set(rY);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
   return (
-    <main>
+    <main className=" cursor-default">
       <section id="hero">
         <div className="flex flex-col items-center justify-center gap-10 h-auto xl:gap-0 xl:flex-row font-montserrat mx-10 mt-10">
           <div className=" relative lg:ml-[7.63rem] w-4/5 xl:w-[55%] ml-10">
@@ -139,23 +183,29 @@ const Home = () => {
               <Button />
             </div>
             <div className=" w-[90%] h-full">
-            <Marquee behavior="" direction="left" autoFill={true} gradient={true} className="relative mt-12">
-              <div className="mr-14 w-28 ">
-                <Image src={google} alt="" />
-              </div>
-              <div className="mr-14 w-28 ">
-                <Image src={airbnb} alt="" />
-              </div>
-              <div className="mr-14 w-28">
-                <Image src={creative} alt="" />
-              </div>
-              <div className="mr-14 w-32 ">
-                <Image src={shopify} alt="" />
-              </div>
-              <div className="mr-14 w-28 ">
-                <Image src={amazon} alt="" />
-              </div>
-            </Marquee>
+              <Marquee
+                behavior=""
+                direction="left"
+                autoFill={true}
+                gradient={true}
+                className="relative mt-12"
+              >
+                <div className="mr-14 w-28 ">
+                  <Image src={google} alt="" />
+                </div>
+                <div className="mr-14 w-28 ">
+                  <Image src={airbnb} alt="" />
+                </div>
+                <div className="mr-14 w-28">
+                  <Image src={creative} alt="" />
+                </div>
+                <div className="mr-14 w-32 ">
+                  <Image src={shopify} alt="" />
+                </div>
+                <div className="mr-14 w-28 ">
+                  <Image src={amazon} alt="" />
+                </div>
+              </Marquee>
             </div>
           </div>
           <div className=" w-[40%] h-auto ">
@@ -216,10 +266,10 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-5">
-            <div>
+            <div data-tilt className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl">
               <Image src={mission1} alt="" className="h-[25rem] w-auto" />
             </div>
-            <div>
+            <div data-tilt className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl">
               <Image src={mission2} alt="" className="h-[25rem] w-auto" />
             </div>
           </div>
@@ -227,8 +277,23 @@ const Home = () => {
       </section>
       <section id="working_process">
         <div className=" flex flex-col lg:flex-row font-montserrat items-center gap-10 lg:gap-0 lg:items-stretch justify-center mx-10 h-auto my-20">
-          <div className="lg:w-[35rem] w-auto ml-10 lg:ml-0 h-auto mr-5 flex items-center justify-center">
-            <div className="bg-cover bg-center bg-[url('https://i.ibb.co/V26NFdR/Background1.png')] rounded-3xl pl-5 w-full h-full flex items-center justify-center">
+          <motion.div
+            ref={ref}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{
+              transformStyle: "preserve-3d",
+              transform,
+            }}
+            className="lg:w-[35rem] w-auto ml-10 lg:ml-0 h-auto mr-5 flex hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl bg-gradient-to-t from-[#0094FF] to-[#25CBFF] items-center justify-center"
+          >
+            <div
+              style={{
+                transform: "translateZ(50px)",
+                transformStyle: "preserve-3d",
+              }}
+              className="bg-cover bg-center bg-[url('https://i.ibb.co/V26NFdR/Background1.png')] rounded-3xl pl-5 w-full h-full flex items-center justify-center"
+            >
               <div className="w-auto h-auto">
                 <div className="flex p-10 flex-col gap-10">
                   <div>
@@ -242,7 +307,11 @@ const Home = () => {
                       Twitter. More to come.
                     </p>
                   </div>
-                  <div>
+                  <div
+                    style={{
+                      transform: "translateZ(75px)",
+                    }}
+                  >
                     <button className=" relative rounded-full h-[4.688rem] w-[14.875rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-white px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Get Started</span>
                     </button>
@@ -250,7 +319,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div className=" w-auto lg:w-[56.5rem] h-auto ml-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-4">
               <div className=" flex flex-col items-start gap-6 justify-center">
