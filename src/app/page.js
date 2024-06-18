@@ -35,24 +35,24 @@ import Marquee from "react-fast-marquee";
 const Card = ({ title, image, heading, description }) => (
   <div className="group relative">
     <div className=" absolute inset-3 duration-1000 opacity-75 group-hover:bg-gradient-to-br group-hover:animate-till group-hover:from-sky-500 group-hover:to-purple-500 rounded-2xl group-hover:blur-xl "></div>
-    <div className=" relative bg-white  border-2  px-10 py-10  rounded-2xl m-2">
+    <div className=" relative bg-white  border-2  px-7 py-10  rounded-2xl m-2">
       <div className=" mx-auto flex items-start">
         <h3 className="text-xl text-[#002548] bg-[#F6F6F6] group-hover:bg-sky-300/30 py-3 px-7 duration-700 text-center rounded-full font-semibold mb-2">
           {title}
         </h3>
       </div>
       <div>
-        <p className=" mt-10 font-extrabold text-2xl text-[#002548]">
+        <p className=" mt-10 font-bold text-2xl text-[#002548]">
           {heading}
         </p>
       </div>
       <div>
-        <p className=" mt-5 text-[#808080] text-xl">{description}</p>
+        <p className=" mt-5 text-[#808080] text-lg">{description}</p>
       </div>
       <div className=" border-t-2 border-[#DCDCDC] mt-10">
         <div className=" h-[4.7rem] mt-4 flex flex-row items-center justify-between">
           <div>
-            <Image src={image} alt="" className="w-16"/>
+            <Image src={image} alt="" className="w-14"/>
           </div>
           <div>
             <button className=" relative rounded-full h-[4rem] w-[13.8rem] sm:h-[3.5rem] sm:w-[9rem] xl:h-[4rem] xl:w-[13.8rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl sm:font-medium sm:hover:font-semibold sm:text-lg xl:font-semibold xl:hover:font-bold xl:text-2xl bg-gradient-to-r from-[#76CDFF] to-[#008DDD] px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#002548] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
@@ -219,7 +219,7 @@ const Home = () => {
             Simple, yet Powerful Features
           </h1>
           <div className=" relative container mt-10 mx-auto p-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {cards.map((card, index) => (
                 <Card
                   key={index}
@@ -399,11 +399,11 @@ const Home = () => {
                   alt="image description"
                 />
                 <figcaption className="absolute px-4 bottom-3">
-                  <div className="flex flex-row gap-2">
-                    <p className=" h-[2.2rem] w-[7rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-lg text-[#002548]">
+                  <div className="flex flex-row gap-4">
+                    <p className=" h-[1.5rem] w-[4rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-bold text-xs text-[#002548]">
                       Analyze
                     </p>
-                    <p className=" h-[2.2rem] w-[8rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-lg text-[#002548]">
+                    <p className=" h-[1.5rem] w-[4.8rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-bold text-xs text-[#002548]">
                       Marketing
                     </p>
                   </div>
@@ -437,11 +437,11 @@ const Home = () => {
                   alt="image description"
                 />
                 <figcaption className="absolute px-4 bottom-3">
-                  <div className="flex flex-row gap-2">
-                    <p className=" h-[2.2rem] w-[7rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-lg text-[#002548]">
+                  <div className="flex flex-row gap-5">
+                    <p className="h-[1.5rem] w-[4rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-bold text-xs text-[#002548]">
                       Analyze
                     </p>
-                    {/* <p className=" h-[2.5rem] w-[10rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-2xl text-[#002548]">
+                    {/* <p className=" h-[1.5rem] w-[4.8rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-bold text-xs text-[#002548]">
                       Marketing
                     </p> */}
                   </div>
@@ -475,11 +475,11 @@ const Home = () => {
                   alt="image description"
                 />
                 <figcaption className="absolute px-4 bottom-3">
-                  <div className="flex flex-row gap-2">
-                    <p className=" h-[2.2rem] w-[7rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-lg text-[#002548]">
+                  <div className="flex flex-row gap-5">
+                    <p className="h-[1.5rem] w-[4rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-bold text-xs text-[#002548]">
                       Analyze
                     </p>
-                    <p className=" h-[2.2rem] w-[8rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-semibold text-lg text-[#002548]">
+                    <p className="h-[1.5rem] w-[4.8rem] bg-white rounded-full border flex items-center justify-center border-[#DCDCDC] font-bold text-xs text-[#002548]">
                       Marketing
                     </p>
                   </div>

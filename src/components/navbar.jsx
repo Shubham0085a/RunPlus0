@@ -1,11 +1,46 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import logo from "../assets/RunPlus - Logo.png";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
+
+const Tab = ({ children, setPosition }) => {
+  const ref = useRef(null);
+
+  return (
+    <li
+      ref={ref}
+      onMouseEnter={() => {
+        if (!ref?.current) return;
+
+        const { width } = ref.current.getBoundingClientRect();
+
+        setPosition({
+          left: ref.current.offsetLeft,
+          width,
+          opacity: 1,
+        });
+      }}
+      className="relative z-10 block text-white "
+    >
+      {children}
+    </li>
+  );
+};
+
+const Cursor = ({ position }) => {
+  return (
+    <motion.li
+      animate={{
+        ...position,
+      }}
+      className="absolute z-0 h-1 top-7  overflow-hidden rounded-full bg-black "
+    />
+  );
+};
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,6 +48,12 @@ const Navbar = () => {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
+  const [position, setPosition] = useState({
+    left: 0,
+    width: 0,
+    opacity: 0,
+  });
 
   return (
     <section id="navbar" className="">
@@ -38,25 +79,40 @@ const Navbar = () => {
             </button>
           </div>
           <div className="flex flex-row items-center justify-between gap-10">
-            <PopoverGroup className="hidden lg:flex lg:gap-x-12 font-medium text-lg -ml-6">
-              <Link
-                href="/"
-                className="  hover:text-[#002548] font-semibold leading-6 text-[#797979] hover:font-semibold  text-lg"
-              >
-                Home
-              </Link>
-              <Link
-                href="/product"
-                className=" hover:text-[#002548] font-semibold leading-6 text-[#797979] hover:font-semibold  text-lg"
-              >
-                Products
-              </Link>
-              <Link
-                href="/about"
-                className=" hover:text-[#002548] font-semibold leading-6 text-[#797979] hover:font-semibold  text-lg"
-              >
-                About Us
-              </Link>
+            <PopoverGroup
+              onMouseLeave={() => {
+                setPosition((pv) => ({
+                  ...pv,
+                  opacity: 0,
+                }));
+              }}
+              className="hidden relative lg:flex lg:gap-x-12 font-medium text-lg -ml-6"
+            >
+              <Tab setPosition={setPosition}>
+                <Link
+                  href="/"
+                  className="hover:text-[#002548] font-semibold text-[#808080] leading-6 text-lg"
+                >
+                  Home
+                </Link>
+              </Tab>
+              <Tab setPosition={setPosition}>
+                <Link
+                  href="/product"
+                  className=" hover:text-[#002548] font-semibold text-[#808080] leading-6 hover:font-semibold  text-lg"
+                >
+                  Products
+                </Link>
+              </Tab>
+              <Tab setPosition={setPosition}>
+                <Link
+                  href="/about"
+                  className=" hover:text-[#002548] font-semibold leading-6 text-[#808080] hover:font-semibold  text-lg"
+                >
+                  About Us
+                </Link>
+              </Tab>
+              <Cursor position={position} />
             </PopoverGroup>
             <div className="hidden lg:flex lg:flex-1 gap-5 lg:justify-end">
               <motion.div
