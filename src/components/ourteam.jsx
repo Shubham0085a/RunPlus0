@@ -10,7 +10,7 @@ const Ourteam = () => {
   return (
     <section id="our_team">
       <div className="bg-cover bg-center bg-[url('https://i.ibb.co/gzJKtCJ/Background2.png')] pt-16 px-10 font-montserrat text-[#FFFFFF]">
-        <div className="flex flex-col gap-10 mx-10 md:mx-0 md:gap-0 md:flex-row items-center justify-around">
+        <div className="flex flex-col gap-10 mx-10 md:mx-0 md:gap-0 md:flex-row items-center justify-around scrollanimation animate-appear">
           <div className=" w-auto lg:w-[43rem] flex flex-col gap-5">
             <div>
               <h1 className=" font-extrabold text-6xl">Our Team</h1>
@@ -29,14 +29,14 @@ const Ourteam = () => {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-12 py-12">
-          <div className="">
-            <div data-tilt>
+          <div>
+            <div data-tilt className="scrollanimation animate-appear">
               <Image src={Manjunath} alt="" className="w-[27rem]"/>
             </div>
             <div className=" flex flex-col gap-5 mt-5">
-              <p className=" font-bold text-3xl text-center">Manjunath</p>
-              <p className=" font-medium text-base text-center">CEO</p>
-              <div className=" flex flex-row items-center justify-center gap-5">
+              <p className=" font-bold text-3xl text-center scrollanimation animate-appear">Manjunath</p>
+              <p className=" font-medium text-base text-center scrollanimation animate-appear">CEO</p>
+              <div className=" flex flex-row items-center justify-center gap-5 scrollanimation animate-appear">
                 <svg
                   width="12"
                   height="21"
@@ -77,13 +77,13 @@ const Ourteam = () => {
             </div>
           </div>
           <div>
-            <div data-tilt>
+            <div data-tilt className="scrollanimation animate-appear">
               <Image src={Prashanthi} alt="" className="w-[27rem]"/>
             </div>
             <div className=" flex flex-col gap-5 mt-5">
-              <p className=" font-bold text-3xl text-center">Prashanthi</p>
-              <p className=" font-medium text-base text-center">Co-Founder</p>
-              <div className=" flex flex-row items-center justify-center gap-5">
+              <p className=" font-bold text-3xl text-center scrollanimation animate-appear">Prashanthi</p>
+              <p className=" font-medium text-base text-center scrollanimation animate-appear">Co-Founder</p>
+              <div className=" flex flex-row items-center justify-center gap-5 scrollanimation animate-appear">
                 <svg
                   width="12"
                   height="21"
@@ -124,13 +124,13 @@ const Ourteam = () => {
             </div>
           </div>
           <div>
-            <div data-tilt>
+            <div data-tilt className="scrollanimation animate-appear">
               <Image src={Raghunath} alt="" className="w-[27rem]"/>
             </div>
             <div className=" flex flex-col gap-5 mt-5">
-              <p className=" font-bold text-3xl text-center">Raghunath</p>
-              <p className=" font-medium text-base text-center">Co-Founder</p>
-              <div className=" flex flex-row items-center justify-center gap-5">
+              <p className=" font-bold text-3xl text-center scrollanimation animate-appear">Raghunath</p>
+              <p className=" font-medium text-base text-center scrollanimation animate-appear">Co-Founder</p>
+              <div className=" flex flex-row items-center justify-center gap-5 scrollanimation animate-appear">
                 <svg
                   width="12"
                   height="21"

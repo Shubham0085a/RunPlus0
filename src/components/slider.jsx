@@ -118,7 +118,7 @@ const Slider = () => {
 
   return (
     <section className="section font-montserrat h-auto bg-sky-300/10">
-      <div className="title">
+      <div className="title scrollanimation animate-appear">
         <h2 className=" font-extrabold text-5xl text-[#2F2F2F] pt-10">
           Our Happy Family
         </h2>
@@ -138,14 +138,14 @@ const Slider = () => {
           }
           return (
             <article className={position} key={id}>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center scrollanimation animate-appear">
                 <Image src={img} alt={name} className="person-img" />
               </div>
-              <div className="flex flex-row items-center justify-center">
+              <div className="flex flex-row items-center justify-center scrollanimation animate-appear">
                 <h4 className=" font-extrabold text-xl">{name}</h4>
                 <p className=" text-lg">{title}</p>
               </div>
-              <p className=" max-w-[35em] mx-auto mt-8 text-[#808080] font-normal text-2xl leading-normal">
+              <p className=" max-w-[35em] mx-auto mt-8 text-[#808080] font-normal text-2xl leading-normal scrollanimation animate-appear">
                 {review}
               </p>
             </article>

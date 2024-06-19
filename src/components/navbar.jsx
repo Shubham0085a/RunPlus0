@@ -37,7 +37,7 @@ const Cursor = ({ position }) => {
       animate={{
         ...position,
       }}
-      className="absolute z-0 h-1 top-7  overflow-hidden rounded-full bg-black "
+      className="absolute z-0 h-1 top-7  overflow-hidden rounded-full bg-[#002548] "
     />
   );
 };

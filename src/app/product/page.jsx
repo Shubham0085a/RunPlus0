@@ -11,8 +11,8 @@ import Slider from "@/components/slider";
 import VanillaTilt from "vanilla-tilt";
 
 const Card = ({ image, heading, description }) => (
-  <div className="group relative">
-  <div className=" absolute inset-3 duration-1000 opacity-75 group-hover:bg-gradient-to-br group-hover:animate-till group-hover:from-[#008DDD] group-hover:to-purple-500 rounded-2xl group-hover:blur-xl "></div>
+  <div className="group relative scrollanimation animate-appear">
+    <div className=" absolute inset-3 duration-1000 opacity-75 group-hover:bg-gradient-to-br group-hover:animate-till group-hover:from-[#008DDD] group-hover:to-purple-500 rounded-2xl group-hover:blur-xl "></div>
     <div className="hover:bg-white relative bg-[#EDEEF0] flex items-center justify-center m-3 font-montserrat hover:shadow-md border px-10 py-10 rounded-2xl">
       <div className=" w-[25rem] h-[21.50rem] flex flex-col gap-10 items-start justify-center">
         <div>
@@ -78,7 +78,7 @@ function Product() {
   return (
     <main>
       <section id="hero_about">
-        <div className=" mx-20 my-5">
+        <div className=" mx-20 my-5 scrollanimation animate-appear">
           <div className="bg-cover bg-center bg-[url('https://i.ibb.co/C5hVCqf/background3.png')] flex items-center justify-center font-montserrat rounded-2xl text-[#FFFFFF]">
             <div className=" w-11/12 sm:w-3/4 flex flex-col my-20 gap-5 items-center justify-center">
               <h1 className=" font-semibold text-3xl sm:font-extrabold sm:text-5xl lg:text-7xl">
@@ -94,23 +94,27 @@ function Product() {
       </section>
       <section id="hero">
         <div className="flex flex-col lg:flex-row gap-10 my-20 mx-20 font-montserrat items-center justify-center">
-          <div>
+          <div className="scrollanimation animate-appear">
             <Image src={Herologo} alt="" />
           </div>
           <div className=" md:w-[40rem] lg:w-[50rem] flex flex-col gap-10">
             <div className="flex flex-col gap-4">
-              <h1 className=" font-bold text-4xl sm:font-extrabold sm:text-6xl">
-                Empowerment through Technology with Kalpkarai
-              </h1>
-              <p className=" font-normal text-2xl pr-20 text-[#808080]">
-                Building an enterprise level site doesn&apos;t need nightmare or
-                cost your thousands. RunPlus is purpose built for ease of use
-                and completxability to create even the most powerful of
-                products.
-              </p>
+              <div className="scrollanimation animate-appear">
+                <h1 className=" font-bold text-4xl sm:font-extrabold sm:text-6xl">
+                  Empowerment through Technology with Kalpkarai
+                </h1>
+              </div>
+              <div className="scrollanimation animate-appear">
+                <p className=" font-normal text-2xl pr-20 text-[#808080]">
+                  Building an enterprise level site doesn&apos;t need nightmare
+                  or cost your thousands. RunPlus is purpose built for ease of
+                  use and completxability to create even the most powerful of
+                  products.
+                </p>
+              </div>
             </div>
             <div className="w-[20rem] sm:w-[30rem] flex flex-col gap-10">
-              <div className="flex flex-row gap-5">
+              <div className="flex flex-row gap-5 scrollanimation animate-appear">
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +165,7 @@ function Product() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row gap-5">
+              <div className="flex flex-row gap-5 scrollanimation animate-appear">
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -237,7 +241,7 @@ function Product() {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="scrollanimation animate-appear">
               <button className=" relative rounded-full h-[4.4rem] w-[17rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-gradient-to-r from-[#008DDD] to-[#76CDFF] px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#002548] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                 <span className="relative z-10">100% Safe to Use</span>
               </button>
@@ -247,11 +251,13 @@ function Product() {
       </section>
       <section id="kalpkari_works">
         <div className=" my-24 mx-10 flex flex-col font-montserrat gap-10 items-center justify-center">
-          <h1 className=" font-extrabold text-5xl text-center">
-            How Kalpkari Works?
-          </h1>
+          <div className="scrollanimation animate-appear">
+            <h1 className="font-extrabold text-5xl text-center">
+              How Kalpkari Works?
+            </h1>
+          </div>
           <div className="flex flex-row flex-wrap items-center my-10 justify-center gap-10">
-            <div className=" max-w-96  flex flex-col items-center justify-center gap-10">
+            <div className=" max-w-96  flex flex-col items-center justify-center gap-10 scrollanimation animate-appear">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -308,13 +314,18 @@ function Product() {
                   />
                 </svg>
               </div>
-              <h1 className="font-bold text-4xl">Connect</h1>
-              <p className=" font-normal text-2xl text-[#828282] text-center">
-                StaffMerge’s mission is to CONNECT Employers with Job Seekers in
-                an effective and efficient platform, making it easier for both.
-              </p>
+              <div>
+                <h1 className="font-bold text-4xl">Connect</h1>
+              </div>
+              <div>
+                <p className=" font-normal text-2xl text-[#828282] text-center">
+                  StaffMerge’s mission is to CONNECT Employers with Job Seekers
+                  in an effective and efficient platform, making it easier for
+                  both.
+                </p>
+              </div>
             </div>
-            <div className=" max-w-96 flex flex-col items-center justify-center gap-10">
+            <div className=" max-w-96 flex flex-col items-center justify-center gap-10 scrollanimation animate-appear">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -389,14 +400,18 @@ function Product() {
                   />
                 </svg>
               </div>
-              <h1 className="font-bold text-4xl">Merge</h1>
-              <p className=" font-normal text-2xl text-[#828282] text-center">
-                Using Resumes, Video Introductions, Video Interviews, and Direct
-                Messages, StaffMerge’s platform goal is to MERGE Employers and
-                Job Seekers.
-              </p>
+              <div>
+                <h1 className="font-bold text-4xl">Merge</h1>
+              </div>
+              <div>
+                <p className=" font-normal text-2xl text-[#828282] text-center">
+                  Using Resumes, Video Introductions, Video Interviews, and
+                  Direct Messages, StaffMerge’s platform goal is to MERGE
+                  Employers and Job Seekers.
+                </p>
+              </div>
             </div>
-            <div className=" max-w-96 flex flex-col items-center justify-center gap-10">
+            <div className=" max-w-96 flex flex-col items-center justify-center gap-10 scrollanimation animate-appear">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -439,20 +454,26 @@ function Product() {
                   />
                 </svg>
               </div>
-              <h1 className="font-bold text-4xl">Work</h1>
-              <p className=" font-normal text-2xl text-[#828282] text-center">
-                After Employers and Job Seekers have connected and merged, now
-                it is time to WORK, mutually benefiting both.
-              </p>
+              <div>
+                <h1 className="font-bold text-4xl">Work</h1>
+              </div>
+              <div>
+                <p className=" font-normal text-2xl text-[#828282] text-center">
+                  After Employers and Job Seekers have connected and merged, now
+                  it is time to WORK, mutually benefiting both.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section id="products_features">
         <div className=" font-montserrat mx-10 my-16">
-          <h1 className=" text-center font-extrabold text-5xl text-[#002548]">
-            Go beyond ultimate features
-          </h1>
+          <div className="scrollanimation animate-appear">
+            <h1 className=" text-center font-extrabold text-5xl text-[#002548]">
+              Go beyond ultimate features
+            </h1>
+          </div>
           <div className="container mx-auto mt-16">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {cards.map((card, index) => (
@@ -471,14 +492,14 @@ function Product() {
       <section id="Our_Pricing">
         <div className="font-montserrat my-20 flex items-center justify-center">
           <div className=" w-3/4 flex flex-col gap-20">
-            <div>
+            <div className="scrollanimation animate-appear">
               <p className=" font-extrabold text-6xl text-center">
                 Our Pricing
               </p>
             </div>
             <div className=" flex flex-row flex-wrap lg:flex-nowrap items-center justify-center mt-10 gap-10">
               <div className=" w-[28.125rem] group hover:-translate-y-10 duration-500 hover:shadow-2xl hover:shadow-[#008DDD] hover:bg-sky-200/5 border border-[#DCDCDC] rounded-3xl">
-                <div className=" flex flex-row items-center p-10 justify-between">
+                <div className=" flex flex-row items-center p-10 justify-between scrollanimation animate-appear">
                   <div>
                     <p className=" font-bold text-xl">STANDARD</p>
                   </div>
@@ -488,7 +509,7 @@ function Product() {
                     </button>
                   </div>
                 </div>
-                <div className=" flex flex-row items-center justify-between p-10 border-b border-t border-[#DCDCDC]">
+                <div className=" flex flex-row items-center justify-between p-10 border-b border-t border-[#DCDCDC] scrollanimation animate-appear">
                   <p className=" font-extrabold text-3xl">$7.99/m</p>
                   <p className=" font-normal text-xl text-[#808080]">
                     $190 billed annually
@@ -496,7 +517,7 @@ function Product() {
                 </div>
                 <div className="flex flex-col gap-10 p-7">
                   <div className="flex flex-col gap-4">
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -514,7 +535,7 @@ function Product() {
                       </svg>
                       <p className=" font-normal text-xl">3 Social Set</p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -534,7 +555,7 @@ function Product() {
                         150 posts per social
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -552,7 +573,7 @@ function Product() {
                       </svg>
                       <p className=" font-normal text-xl">Phone Support</p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -572,7 +593,7 @@ function Product() {
                         Planning & publishing
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -592,7 +613,7 @@ function Product() {
                         Advanced Analytics
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -612,7 +633,7 @@ function Product() {
                         1,000 Posts/mo across
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -632,7 +653,7 @@ function Product() {
                         Instagram, Pinterest & Facebook
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -653,7 +674,7 @@ function Product() {
                       </p>
                     </div>
                   </div>
-                  <div>
+                  <div className="scrollanimation animate-appear">
                     <button className=" relative rounded-full w-full h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Get Started</span>
                     </button>
@@ -661,7 +682,7 @@ function Product() {
                 </div>
               </div>
               <div className=" w-[28.125rem] border group hover:-translate-y-10 hover:shadow-2xl hover:shadow-[#008DDD] hover:bg-sky-200/5 duration-500 border-[#DCDCDC] rounded-3xl">
-                <div className=" flex flex-row items-center p-10 justify-between">
+                <div className=" flex flex-row items-center p-10 justify-between scrollanimation animate-appear">
                   <div>
                     <p className=" font-bold text-xl">PREMIUM</p>
                   </div>
@@ -671,7 +692,7 @@ function Product() {
                     </button>
                   </div>
                 </div>
-                <div className=" flex flex-row items-center justify-between p-10 border-b border-t border-[#DCDCDC]">
+                <div className=" flex flex-row items-center justify-between p-10 border-b border-t border-[#DCDCDC] scrollanimation animate-appear">
                   <p className=" font-extrabold text-3xl">$14.99/m</p>
                   <p className=" font-normal text-xl text-[#808080]">
                     $190 billed annually
@@ -679,7 +700,7 @@ function Product() {
                 </div>
                 <div className="flex flex-col gap-10 p-7">
                   <div className="flex flex-col gap-4">
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -697,7 +718,7 @@ function Product() {
                       </svg>
                       <p className=" font-normal text-xl">3 Social Set</p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -717,7 +738,7 @@ function Product() {
                         150 posts per social
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -735,7 +756,7 @@ function Product() {
                       </svg>
                       <p className=" font-normal text-xl">Phone Support</p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -755,7 +776,7 @@ function Product() {
                         Planning & publishing
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -773,7 +794,7 @@ function Product() {
                       </svg>
                       <p className=" font-normal text-xl">Advanced Analytics</p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -793,7 +814,7 @@ function Product() {
                         1,000 Posts/mo across
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -813,7 +834,7 @@ function Product() {
                         Instagram, Pinterest & Facebook
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -834,7 +855,7 @@ function Product() {
                       </p>
                     </div>
                   </div>
-                  <div>
+                  <div className="scrollanimation animate-appear">
                     <button className=" relative rounded-full w-full h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Get Started</span>
                     </button>
@@ -842,7 +863,7 @@ function Product() {
                 </div>
               </div>
               <div className=" w-[28.125rem] border group hover:-translate-y-10 hover:shadow-2xl hover:shadow-[#008DDD] hover:bg-sky-200/5 duration-500 border-[#DCDCDC] rounded-3xl">
-                <div className=" flex flex-row items-center p-10 justify-between">
+                <div className=" flex flex-row items-center p-10 justify-between scrollanimation animate-appear">
                   <div>
                     <p className=" font-bold text-xl">Standard</p>
                   </div>
@@ -852,7 +873,7 @@ function Product() {
                     </button>
                   </div>
                 </div>
-                <div className=" flex flex-row items-center justify-between p-10 border-b border-t border-[#DCDCDC]">
+                <div className=" flex flex-row items-center justify-between p-10 border-b border-t border-[#DCDCDC] scrollanimation animate-appear">
                   <p className=" font-extrabold text-3xl">$7.99/m</p>
                   <p className=" font-normal text-xl text-[#808080]">
                     $190 billed annually
@@ -860,7 +881,7 @@ function Product() {
                 </div>
                 <div className="flex flex-col gap-10 p-7">
                   <div className="flex flex-col gap-4">
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -878,7 +899,7 @@ function Product() {
                       </svg>
                       <p className=" font-normal text-xl">3 Social Set</p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -898,7 +919,7 @@ function Product() {
                         150 posts per social
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -916,7 +937,7 @@ function Product() {
                       </svg>
                       <p className=" font-normal text-xl">Phone Support</p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -936,7 +957,7 @@ function Product() {
                         Planning & publishing
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -954,7 +975,7 @@ function Product() {
                       </svg>
                       <p className=" font-normal text-xl">Advanced Analytics</p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -974,7 +995,7 @@ function Product() {
                         1,000 Posts/mo across
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -994,7 +1015,7 @@ function Product() {
                         Instagram, Pinterest & Facebook
                       </p>
                     </div>
-                    <div className="flex flex-row gap-4 items-center justify-start">
+                    <div className="flex flex-row gap-4 items-center justify-start scrollanimation animate-appear">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -1015,7 +1036,7 @@ function Product() {
                       </p>
                     </div>
                   </div>
-                  <div>
+                  <div className="scrollanimation animate-appear">
                     <button className=" relative rounded-full w-full h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Get Started</span>
                     </button>

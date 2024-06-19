@@ -33,7 +33,7 @@ import Button from "@/components/button";
 import Marquee from "react-fast-marquee";
 
 const Card = ({ title, image, heading, description }) => (
-  <div className="group relative">
+  <div className="group relative scrollanimation animate-appear">
     <div className=" absolute inset-3 duration-1000 opacity-75 group-hover:bg-gradient-to-br group-hover:animate-till group-hover:from-sky-500 group-hover:to-purple-500 rounded-2xl group-hover:blur-xl "></div>
     <div className=" relative bg-white  border-2  px-7 py-10  rounded-2xl m-2">
       <div className=" mx-auto flex items-start">
@@ -163,7 +163,7 @@ const Home = () => {
             <div className=" absolute top-40 left-14 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-purple-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob"></div>
             <div className=" absolute top-28 right-72 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-yellow-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob animation-delay-2000"></div>
             <div className=" absolute bottom-32 left-56 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-pink-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob animation-delay-4000"></div>
-            <div className=" relative flex flex-col gap-[3.13rem]">
+            <div className=" relative flex flex-col gap-[3.13rem] scrollanimation animate-appear">
               <div>
                 <h1 className=" font-semibold md:font-bold text-4xl md:text-7xl text-[#002548] leading-tight">
                   <span className="bg-gradient-to-r from-[#0094FF] via-[#25CBFF] to-[#20FFCA] inline-block text-transparent bg-clip-text">
@@ -182,7 +182,7 @@ const Home = () => {
               </div>
               <Button />
             </div>
-            <div className=" w-[90%] h-full">
+            <div className=" w-[90%] h-full scrollanimation animate-appear">
               <Marquee
                 behavior=""
                 direction="left"
@@ -208,14 +208,14 @@ const Home = () => {
               </Marquee>
             </div>
           </div>
-          <div className=" w-[40%] h-auto ">
+          <div className=" w-[40%] h-auto scrollanimation animate-appear">
             <Image src={dashboard} alt="" />
           </div>
         </div>
       </section>
       <section id="features">
         <div className=" font-montserrat my-24">
-          <h1 className=" text-center font-extrabold text-5xl mb-16 text-[#002548]">
+          <h1 className=" text-center font-extrabold text-5xl mb-16 text-[#002548] scrollanimation animate-appear">
             Simple, yet Powerful Features
           </h1>
           <div className=" relative container mt-10 mx-auto p-4">
@@ -236,7 +236,7 @@ const Home = () => {
       <section id="mission">
         <div className="my-10 mx-20 font-montserrat flex flex-col lg:flex-row justify-center gap-20 lg:gap-5">
           <div className=" w-auto sm:w-[30rem] md:w-[35rem] lg:w-[40rem] xl:w-[44rem] mt-5 flex flex-col gap-5">
-            <div className="flex flex-col gap-5 ">
+            <div className="flex flex-col gap-5 scrollanimation animate-appear">
               <div>
                 <h1 className="text-[#002548] text-6xl font-extrabold">
                   Our Mission
@@ -266,10 +266,10 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-5">
-            <div data-tilt className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl">
+            <div data-tilt className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl scrollanimation animate-appear">
               <Image src={mission1} alt="" className="h-[25rem] w-auto" />
             </div>
-            <div data-tilt className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl">
+            <div data-tilt className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl scrollanimation animate-appear">
               <Image src={mission2} alt="" className="h-[25rem] w-auto" />
             </div>
           </div>
@@ -285,7 +285,7 @@ const Home = () => {
               transformStyle: "preserve-3d",
               transform,
             }}
-            className="lg:w-[35rem] w-auto ml-10 lg:ml-0 h-auto mr-5 flex hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl bg-gradient-to-t from-[#0094FF] to-[#25CBFF] items-center justify-center"
+            className="lg:w-[35rem] w-auto ml-10 lg:ml-0 h-auto mr-5 flex hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl bg-gradient-to-t from-[#0094FF] to-[#25CBFF] items-center justify-center scrollanimation animate-appear"
           >
             <div
               style={{
@@ -322,7 +322,7 @@ const Home = () => {
           </motion.div>
           <div className=" w-auto lg:w-[56.5rem] h-auto ml-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-4">
-              <div className=" flex flex-col items-start gap-6 justify-center">
+              <div className=" flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
                 <h1 className=" font-black text-5xl text-[#002548]">01</h1>
                 <p className=" font-bold text-4xl text-[#002548]">
                   Create your free account
@@ -332,7 +332,7 @@ const Home = () => {
                   your thousands. Felix is purpose built.
                 </p>
               </div>
-              <div className=" flex flex-col items-start gap-6 justify-center">
+              <div className=" flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
                 <h1 className=" font-black text-5xl text-[#002548]">02</h1>
                 <p className=" font-bold text-4xl text-[#002548]">
                   Connect your channels
@@ -342,7 +342,7 @@ const Home = () => {
                   your thousands. Felix is purpose built.
                 </p>
               </div>
-              <div className=" flex flex-col items-start gap-6 justify-center">
+              <div className=" flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
                 <h1 className=" font-black text-5xl text-[#002548]">03</h1>
                 <p className=" font-bold text-4xl text-[#002548]">
                   Schedule your posts
@@ -352,7 +352,7 @@ const Home = () => {
                   your thousands. Felix is purpose built.
                 </p>
               </div>
-              <div className=" flex flex-col items-start gap-6 justify-center">
+              <div className=" flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
                 <h1 className=" font-black text-5xl text-[#002548]">04</h1>
                 <p className=" font-bold text-4xl text-[#002548]">
                   Publish & get your planning on point
@@ -369,7 +369,7 @@ const Home = () => {
       <Ourteam />
       <section id="blog">
         <div className=" font-montserrat my-16 mx-10">
-          <div className="flex flex-col gap-5 lg:gap-0 lg:flex-row items-start lg:items-center text-[#002548] justify-around">
+          <div className="flex flex-col gap-5 lg:gap-0 lg:flex-row items-start lg:items-center text-[#002548] justify-around scrollanimation animate-appear">
             <div className=" lg:w-[55rem] flex flex-col gap-5">
               <div>
                 <h1 className=" font-extrabold text-6xl">
@@ -392,7 +392,7 @@ const Home = () => {
           </div>
           <div className="flex flex-col lg:flex-row items-center justify-center gap-16 mt-10">
             <div className="max-w-sm">
-              <figure className="relative max-w-sm transition-all duration-300  filter grayscale-[30%] hover:grayscale-0">
+              <figure className="relative max-w-sm transition-all duration-300  filter grayscale-[30%] hover:grayscale-0 scrollanimation animate-appear">
                 <Image
                   className="rounded-lg"
                   src={blog1}
@@ -410,11 +410,11 @@ const Home = () => {
                 </figcaption>
               </figure>
               <div className="text-[#002548] flex flex-col gap-5 mt-5">
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between scrollanimation animate-appear">
                   <p>March 25, 2024</p>
                   <p>3 min read</p>
                 </div>
-                <div className=" border-t-2 border-[#DCDCDC] flex flex-col gap-5">
+                <div className=" border-t-2 border-[#DCDCDC] flex flex-col gap-5 scrollanimation animate-appear">
                   <h1 className=" font-bold text-3xl mt-5">
                     Detailed insights for your social media
                   </h1>
@@ -430,7 +430,7 @@ const Home = () => {
               </div>
             </div>
             <div className="max-w-sm">
-              <figure className="relative max-w-sm transition-all duration-300  filter grayscale-[30%] hover:grayscale-0">
+              <figure className="relative max-w-sm transition-all duration-300  filter grayscale-[30%] hover:grayscale-0 scrollanimation animate-appear">
                 <Image
                   className="rounded-lg"
                   src={blog2}
@@ -448,11 +448,11 @@ const Home = () => {
                 </figcaption>
               </figure>
               <div className="text-[#002548] flex flex-col gap-5 mt-5">
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between scrollanimation animate-appear">
                   <p>March 25, 2024</p>
                   <p>3 min read</p>
                 </div>
-                <div className=" border-t-2 border-[#DCDCDC] flex flex-col gap-5">
+                <div className=" border-t-2 border-[#DCDCDC] flex flex-col gap-5 scrollanimation animate-appear">
                   <h1 className=" font-bold text-3xl mt-5">
                     New Device Invention for Digital Platform
                   </h1>
@@ -468,7 +468,7 @@ const Home = () => {
               </div>
             </div>
             <div className="max-w-sm">
-              <figure className="relative max-w-sm transition-all duration-300  filter grayscale-[30%] hover:grayscale-0">
+              <figure className="relative max-w-sm transition-all duration-300  filter grayscale-[30%] hover:grayscale-0 scrollanimation animate-appear">
                 <Image
                   className="rounded-lg"
                   src={blog3}
@@ -486,11 +486,11 @@ const Home = () => {
                 </figcaption>
               </figure>
               <div className="text-[#002548] flex flex-col gap-5 mt-5">
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between scrollanimation animate-appear">
                   <p>March 25, 2024</p>
                   <p>3 min read</p>
                 </div>
-                <div className=" border-t-2 border-[#DCDCDC] flex flex-col gap-5">
+                <div className=" border-t-2 border-[#DCDCDC] flex flex-col gap-5 scrollanimation animate-appear">
                   <h1 className=" font-bold text-3xl mt-5">
                     Business Strategy Make His Goal Acheive
                   </h1>

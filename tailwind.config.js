@@ -11,9 +11,14 @@ module.exports = {
     extend: {
       animation: {
         blob: "blob 7s infinite",
-        till: "till 10s infinite linear"
+        till: "till 10s infinite linear",
+        appear: "appear linear"
       },
       keyframes: {
+        appear: {
+          '0%': { opacity: 0, transform: 'scale(0.5)' },
+          '100%': { opacity: 1, transform: 'scale(1)' },
+        },
         till: {
           "0%, 50%, 100%": {
             transform: "rotate(0deg)",

@@ -221,3 +221,34 @@ article.nexttSlide {
         }
     }
 }
+
+.curve {
+    .svgAnimation, .background {
+        position: fixed;
+        z-index: 100;
+        height: calc(100vh + 600px);
+        width: 100vw;
+        pointer-events: none;
+        left: 0;
+        top: 0;
+    }
+    .background {
+       background-color: black; 
+       transition: opacity 0s linear 0.1s;
+    }
+    .route{
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        color: white;
+        font-size: 46px;
+        z-index: 3;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
+
+.scrollanimation {
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
