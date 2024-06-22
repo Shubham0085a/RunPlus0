@@ -162,7 +162,8 @@ const Footer = () => {
         <div className="flex items-center border-t-2 border-[#D2D2D2] justify-center h-20">
           <p className=" font-normal text-base text-center sm:text-lg">
             Copyright <sup>&reg;</sup> 2024 All rights Reserved. powered by{" "}
-            <Link href="https://www.nityom.com/">Nityom</Link>.
+            <Link href="https://www.nityom.com/" target="_blank"
+        rel="noopener noreferrer">Nityom</Link>.
           </p>
         </div>
       </div>

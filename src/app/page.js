@@ -182,7 +182,7 @@ const Home = () => {
               </div>
               <Button />
             </div>
-            <div className=" w-[90%] h-full scrollanimation animate-appear">
+            <div className=" w-[100%] h-full scrollanimation animate-appear">
               <Marquee
                 behavior=""
                 direction="left"

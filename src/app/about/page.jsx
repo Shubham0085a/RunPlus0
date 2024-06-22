@@ -111,19 +111,19 @@ const About = () => {
           </div>
           <div className="flex flex-col lg:w-[40rem] gap-10">
             <div className="flex flex-col gap-10">
-            <div className="scrollanimation animate-appear">
-              <p className=" font-extrabold text-4xl sm:text-6xl">
-                We&apos;re on a mission to bring ideas to life.
-              </p>
-            </div>
-            <div className="scrollanimation animate-appear">
-              <p className=" font-normal text-2xl">
-                Building an enterprise level site doesn&apos;t need nightmare or
-                cost your thousands. RunPlus is purpose built for ease of use
-                and completxability to create even the most powerful of
-                products.
-              </p>
-            </div>
+              <div className="scrollanimation animate-appear">
+                <p className=" font-extrabold text-4xl sm:text-6xl">
+                  We&apos;re on a mission to bring ideas to life.
+                </p>
+              </div>
+              <div className="scrollanimation animate-appear">
+                <p className=" font-normal text-2xl">
+                  Building an enterprise level site doesn&apos;t need nightmare
+                  or cost your thousands. RunPlus is purpose built for ease of
+                  use and completxability to create even the most powerful of
+                  products.
+                </p>
+              </div>
             </div>
             <div className="flex flex-col border-t border-[#DCDCDC] py-10 gap-10">
               <div className="flex flex-row gap-4 scrollanimation animate-appear">
@@ -331,6 +331,8 @@ const About = () => {
             </div>
           </div>
         </div>
+      </section>
+      <section>
       </section>
     </main>
   );
