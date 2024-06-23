@@ -13,16 +13,16 @@ import VanillaTilt from "vanilla-tilt";
 const Card = ({ image, heading, description }) => (
   <div className="group relative scrollanimation animate-appear">
     <div className=" absolute inset-3 duration-1000 opacity-75 group-hover:bg-gradient-to-br group-hover:animate-till group-hover:from-[#008DDD] group-hover:to-purple-500 rounded-2xl group-hover:blur-xl "></div>
-    <div className="hover:bg-white relative bg-[#EDEEF0] flex items-center justify-center m-3 font-montserrat hover:shadow-md border px-10 py-10 rounded-2xl">
-      <div className=" w-[25rem] h-[21.50rem] flex flex-col gap-10 items-start justify-center">
+    <div className="hover:bg-white relative bg-[#EDEEF0] flex items-center justify-center m-3 font-montserrat hover:shadow-md border px-5 sm:px-10 py-10 rounded-2xl">
+      <div className=" flex flex-col gap-6 sm:gap-10 items-start justify-center">
         <div>
           <Image src={image} alt="" />
         </div>
         <div>
-          <h1 className=" font-bold text-3xl">{heading}</h1>
+          <h1 className=" font-bold text-2xl sm:text-3xl">{heading}</h1>
         </div>
         <div>
-          <p className=" font-normal text-2xl">{description}</p>
+          <p className=" font-normal text-xl sm:text-2xl">{description}</p>
         </div>
       </div>
     </div>
@@ -78,13 +78,13 @@ function Product() {
   return (
     <main>
       <section id="hero_about">
-        <div className=" mx-20 my-5 scrollanimation animate-appear">
+        <div className="mx-5 sm:mx-20 my-5 scrollanimation animate-appear">
           <div className="bg-cover bg-center bg-[url('https://i.ibb.co/C5hVCqf/background3.png')] flex items-center justify-center font-montserrat rounded-2xl text-[#FFFFFF]">
-            <div className=" w-11/12 sm:w-3/4 flex flex-col my-20 gap-5 items-center justify-center">
-              <h1 className=" font-semibold text-3xl sm:font-extrabold sm:text-5xl lg:text-7xl">
+            <div className=" w-11/12 sm:w-3/4 flex flex-col my-10 sm:my-20 gap-5 items-center justify-center">
+              <h1 className=" font-semibold text-4xl sm:font-extrabold sm:text-5xl lg:text-7xl">
                 Our Products
               </h1>
-              <p className=" text-center font-medium text-2xl sm:text-3xl">
+              <p className=" text-center font-medium text-xl sm;text-2xl sm:text-3xl">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
@@ -93,19 +93,19 @@ function Product() {
         </div>
       </section>
       <section id="hero">
-        <div className="flex flex-col lg:flex-row gap-10 my-20 mx-20 font-montserrat items-center justify-center">
+        <div className="flex flex-col lg:flex-row gap-10 my-20 mx-10 sm:mx-20 font-montserrat items-center justify-center">
           <div className="scrollanimation animate-appear">
             <Image src={Herologo} alt="" />
           </div>
           <div className=" md:w-[40rem] lg:w-[50rem] flex flex-col gap-10">
             <div className="flex flex-col gap-4">
               <div className="scrollanimation animate-appear">
-                <h1 className=" font-bold text-4xl sm:font-extrabold sm:text-6xl">
+                <h1 className=" font-bold text-3xl sm:font-extrabold sm:text-6xl">
                   Empowerment through Technology with Kalpkarai
                 </h1>
               </div>
               <div className="scrollanimation animate-appear">
-                <p className=" font-normal text-2xl pr-20 text-[#808080]">
+                <p className=" font-normal text-lg sm:text-2xl sm:pr-20 text-[#808080]">
                   Building an enterprise level site doesn&apos;t need nightmare
                   or cost your thousands. RunPlus is purpose built for ease of
                   use and completxability to create even the most powerful of
@@ -159,8 +159,8 @@ function Product() {
                   </svg>
                 </div>
                 <div>
-                  <h1 className=" font-medium text-3xl">Smart Schedule</h1>
-                  <p className=" font-normal text-xl text-[#808080]">
+                  <h1 className=" font-medium text-xl sm:text-3xl">Smart Schedule</h1>
+                  <p className=" font-normal text-base sm:text-xl text-[#808080]">
                     Building an enterprisedoesn&apos;t need your thousands.
                   </p>
                 </div>
@@ -234,15 +234,15 @@ function Product() {
                   </svg>
                 </div>
                 <div>
-                  <h1 className=" font-medium text-3xl">Hashtag Finder</h1>
-                  <p className=" font-normal text-xl text-[#808080]">
+                  <h1 className=" font-medium text-xl sm:text-3xl">Hashtag Finder</h1>
+                  <p className=" font-normal text-base sm:text-xl text-[#808080]">
                     Building an enterprisedoesn&apos;t need your thousands.
                   </p>
                 </div>
               </div>
             </div>
             <div className="scrollanimation animate-appear">
-              <button className=" relative rounded-full h-[4.4rem] w-[17rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-gradient-to-r from-[#008DDD] to-[#76CDFF] px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#002548] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+              <button className=" relative rounded-full h-14 w-60 sm:h-[4.4rem] sm:w-[17rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-xl sm:text-2xl bg-gradient-to-r from-[#76CDFF] to-[#008DDD] px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#002548] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                 <span className="relative z-10">100% Safe to Use</span>
               </button>
             </div>
@@ -252,12 +252,12 @@ function Product() {
       <section id="kalpkari_works">
         <div className=" my-24 mx-10 flex flex-col font-montserrat gap-10 items-center justify-center">
           <div className="scrollanimation animate-appear">
-            <h1 className="font-extrabold text-5xl text-center">
+            <h1 className="font-extrabold text-3xl sm:text-5xl text-center">
               How Kalpkari Works?
             </h1>
           </div>
-          <div className="flex flex-row flex-wrap items-center my-10 justify-center gap-10">
-            <div className=" max-w-96  flex flex-col items-center justify-center gap-10 scrollanimation animate-appear">
+          <div className="flex flex-row flex-wrap items-center my-10 justify-center gap-16 sm:gap-10">
+            <div className=" max-w-96  flex flex-col items-center justify-center gap-5 sm:gap-10 scrollanimation animate-appear">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -315,17 +315,17 @@ function Product() {
                 </svg>
               </div>
               <div>
-                <h1 className="font-bold text-4xl">Connect</h1>
+                <h1 className="font-bold text-3xl sm:text-4xl">Connect</h1>
               </div>
               <div>
-                <p className=" font-normal text-2xl text-[#828282] text-center">
+                <p className=" font-normal text-base sm:text-2xl text-[#828282] text-center">
                   StaffMerge’s mission is to CONNECT Employers with Job Seekers
                   in an effective and efficient platform, making it easier for
                   both.
                 </p>
               </div>
             </div>
-            <div className=" max-w-96 flex flex-col items-center justify-center gap-10 scrollanimation animate-appear">
+            <div className=" max-w-96 flex flex-col items-center justify-center gap-5 sm:gap-10 scrollanimation animate-appear">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -401,17 +401,17 @@ function Product() {
                 </svg>
               </div>
               <div>
-                <h1 className="font-bold text-4xl">Merge</h1>
+                <h1 className="font-bold text-3xl sm:text-4xl">Merge</h1>
               </div>
               <div>
-                <p className=" font-normal text-2xl text-[#828282] text-center">
+                <p className=" font-normal text-base sm:text-2xl text-[#828282] text-center">
                   Using Resumes, Video Introductions, Video Interviews, and
                   Direct Messages, StaffMerge’s platform goal is to MERGE
                   Employers and Job Seekers.
                 </p>
               </div>
             </div>
-            <div className=" max-w-96 flex flex-col items-center justify-center gap-10 scrollanimation animate-appear">
+            <div className=" max-w-96 flex flex-col items-center justify-center gap-5 sm:gap-10 scrollanimation animate-appear">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -455,10 +455,10 @@ function Product() {
                 </svg>
               </div>
               <div>
-                <h1 className="font-bold text-4xl">Work</h1>
+                <h1 className="font-bold text-3xl sm:text-4xl">Work</h1>
               </div>
               <div>
-                <p className=" font-normal text-2xl text-[#828282] text-center">
+                <p className=" font-normal text-base sm:text-2xl text-[#828282] text-center">
                   After Employers and Job Seekers have connected and merged, now
                   it is time to WORK, mutually benefiting both.
                 </p>
@@ -470,7 +470,7 @@ function Product() {
       <section id="products_features">
         <div className=" font-montserrat mx-10 my-16">
           <div className="scrollanimation animate-appear">
-            <h1 className=" text-center font-extrabold text-5xl text-[#002548]">
+            <h1 className=" text-center font-extrabold text-3xl sm:text-5xl text-[#002548]">
               Go beyond ultimate features
             </h1>
           </div>
@@ -491,27 +491,27 @@ function Product() {
       <Slider />
       <section id="Our_Pricing">
         <div className="font-montserrat my-20 flex items-center justify-center">
-          <div className=" w-3/4 flex flex-col gap-20">
+          <div className=" w-3/4 flex flex-col gap-10 sm:gap-20">
             <div className="scrollanimation animate-appear">
-              <p className=" font-extrabold text-6xl text-center">
+              <p className=" font-extrabold text-5xl sm:text-6xl text-center">
                 Our Pricing
               </p>
             </div>
             <div className=" flex flex-row flex-wrap lg:flex-nowrap items-center justify-center mt-10 gap-10">
               <div className=" w-[28.125rem] group hover:-translate-y-10 duration-500 hover:shadow-2xl hover:shadow-[#008DDD] hover:bg-sky-200/5 border border-[#DCDCDC] rounded-3xl">
-                <div className=" flex flex-row items-center p-10 justify-between scrollanimation animate-appear">
+                <div className=" flex flex-row items-center p-4 sm:p-10 justify-between scrollanimation animate-appear">
                   <div>
-                    <p className=" font-bold text-xl">STANDARD</p>
+                    <p className=" font-bold text-lg sm:text-xl">STANDARD</p>
                   </div>
                   <div>
-                    <button className=" relative rounded-full bg-black text-white w-36 h-14 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full bg-black text-white w-32 h-12 sm:w-36 sm:h-14 border-2 overflow-hidden before:rounded-full font-semibold text-lg sm:text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Save 20%</span>
                     </button>
                   </div>
                 </div>
-                <div className=" flex flex-row items-center justify-between p-10 border-b border-t border-[#DCDCDC] scrollanimation animate-appear">
-                  <p className=" font-extrabold text-3xl">$7.99/m</p>
-                  <p className=" font-normal text-xl text-[#808080]">
+                <div className=" flex flex-row items-center justify-between p-4 sm:p-10 border-b border-t border-[#DCDCDC] scrollanimation animate-appear">
+                  <p className=" font-extrabold text-xl sm:text-3xl">$7.99/m</p>
+                  <p className=" font-normal text-base sm:text-xl text-[#808080]">
                     $190 billed annually
                   </p>
                 </div>
@@ -675,26 +675,26 @@ function Product() {
                     </div>
                   </div>
                   <div className="scrollanimation animate-appear">
-                    <button className=" relative rounded-full w-full h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full w-full h-12 sm:h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-xl sm:text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Get Started</span>
                     </button>
                   </div>
                 </div>
               </div>
               <div className=" w-[28.125rem] border group hover:-translate-y-10 hover:shadow-2xl hover:shadow-[#008DDD] hover:bg-sky-200/5 duration-500 border-[#DCDCDC] rounded-3xl">
-                <div className=" flex flex-row items-center p-10 justify-between scrollanimation animate-appear">
+                <div className=" flex flex-row items-center p-4 sm:p-10 justify-between scrollanimation animate-appear">
                   <div>
-                    <p className=" font-bold text-xl">PREMIUM</p>
+                    <p className=" font-bold text-lg sm:text-xl">PREMIUM</p>
                   </div>
                   <div>
-                    <button className=" relative rounded-full bg-black text-white w-36 h-14 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full bg-black text-white w-32 h-12 sm:w-36 sm:h-14 border-2 overflow-hidden before:rounded-full font-semibold text-lg sm:text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Popular</span>
                     </button>
                   </div>
                 </div>
-                <div className=" flex flex-row items-center justify-between p-10 border-b border-t border-[#DCDCDC] scrollanimation animate-appear">
-                  <p className=" font-extrabold text-3xl">$14.99/m</p>
-                  <p className=" font-normal text-xl text-[#808080]">
+                <div className=" flex flex-row items-center justify-between p-4 sm:p-10 border-b border-t border-[#DCDCDC] scrollanimation animate-appear">
+                  <p className=" font-extrabold text-xl sm:text-3xl">$14.99/m</p>
+                  <p className=" font-normal text-base sm:text-xl text-[#808080]">
                     $190 billed annually
                   </p>
                 </div>
@@ -856,26 +856,26 @@ function Product() {
                     </div>
                   </div>
                   <div className="scrollanimation animate-appear">
-                    <button className=" relative rounded-full w-full h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full w-full h-12 sm:h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-xl sm:text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Get Started</span>
                     </button>
                   </div>
                 </div>
               </div>
               <div className=" w-[28.125rem] border group hover:-translate-y-10 hover:shadow-2xl hover:shadow-[#008DDD] hover:bg-sky-200/5 duration-500 border-[#DCDCDC] rounded-3xl">
-                <div className=" flex flex-row items-center p-10 justify-between scrollanimation animate-appear">
+                <div className=" flex flex-row items-center p-4 sm:p-10 justify-between scrollanimation animate-appear">
                   <div>
-                    <p className=" font-bold text-xl">Standard</p>
+                    <p className=" font-bold text-lg sm:text-xl">Standard</p>
                   </div>
                   <div>
-                    <button className=" relative rounded-full bg-black text-white w-36 h-14 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full bg-black text-white w-32 h-12 sm:w-36 sm:h-14 border-2 overflow-hidden before:rounded-full font-semibold text-lg sm:text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Save 20%</span>
                     </button>
                   </div>
                 </div>
-                <div className=" flex flex-row items-center justify-between p-10 border-b border-t border-[#DCDCDC] scrollanimation animate-appear">
-                  <p className=" font-extrabold text-3xl">$7.99/m</p>
-                  <p className=" font-normal text-xl text-[#808080]">
+                <div className=" flex flex-row items-center justify-between p-4 sm:p-10 border-b border-t border-[#DCDCDC] scrollanimation animate-appear">
+                  <p className=" font-extrabold text-xl sm:text-3xl">$7.99/m</p>
+                  <p className=" font-normal text-base sm:text-xl text-[#808080]">
                     $190 billed annually
                   </p>
                 </div>
@@ -1037,7 +1037,7 @@ function Product() {
                     </div>
                   </div>
                   <div className="scrollanimation animate-appear">
-                    <button className=" relative rounded-full w-full h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full w-full h-12 sm:h-[5.625rem] border-2 overflow-hidden before:rounded-full font-medium text-xl sm:text-2xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-[#76CDFF] before:to-[#008DDD] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Get Started</span>
                     </button>
                   </div>

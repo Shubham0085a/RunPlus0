@@ -33,7 +33,7 @@ h3 {
     margin: 0 auto;
     margin-top: 4rem;
     width: 80vw;
-    height: 600px;
+    height: 500px;
     max-width: 800px;
     text-align: center;
     position: relative;
@@ -156,9 +156,9 @@ article.nexttSlide {
 .button_container,
 .button_container::before,
 .button_container::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .main_button {
@@ -175,7 +175,8 @@ article.nexttSlide {
     font-weight: 500;
     width: 240px;
     border-radius: 9999rem;
-    background: linear-gradient(90deg, rgba(118, 205, 255, 1) 0%, rgba(0, 141, 221, 1) 100%);;
+    background: linear-gradient(90deg, rgba(118, 205, 255, 1) 0%, rgba(0, 141, 221, 1) 100%);
+    ;
     position: relative;
     display: flex;
     justify-content: center;
@@ -223,7 +224,9 @@ article.nexttSlide {
 }
 
 .curve {
-    .svgAnimation, .background {
+
+    .svgAnimation,
+    .background {
         position: fixed;
         z-index: 100;
         height: calc(100vh + 600px);
@@ -232,11 +235,13 @@ article.nexttSlide {
         left: 0;
         top: 0;
     }
+
     .background {
-       background-color: black; 
-       transition: opacity 0s linear 0.1s;
+        background-color: black;
+        transition: opacity 0s linear 0.1s;
     }
-    .route{
+
+    .route {
         position: absolute;
         left: 50%;
         top: 40%;
@@ -251,4 +256,28 @@ article.nexttSlide {
 .scrollanimation {
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
+}
+
+.card-wrapper::before {
+    background: conic-gradient(rgba(224, 114, 182, 0.9) 0deg,
+            rgba(192, 132, 252, 0.9) 0deg,
+            transparent 80deg);
+
+    @apply hover:absolute hover:h-[150%] hover:w-[150%] hover:left-[-25%] hover:top-[-25%] hover:content-[''] hover:animate-border-spin;
+}
+
+.card-content {
+    @apply absolute w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] left-[1px] bg-white hover:bg-[#EDEEF0] hover:duration-1000 hover:transition hover:ease-in-out rounded-2xl;
+}
+
+.value-card-wrapper::before {
+    background: conic-gradient(rgba(224, 114, 182, 0.9) 0deg,
+            rgba(192, 132, 252, 0.9) 0deg,
+            transparent 80deg);
+
+    @apply absolute h-[300%] w-[300%] left-[-100%] top-[-100%] content-[''] animate-border-spin;
+}
+
+.value-card-content {
+    @apply relative  w-[calc(100%-2px)] h-[calc(100%-2px)] top-[1px] left-[1px] bg-[#F6F6F6] duration-1000 transition ease-in-out;
 }

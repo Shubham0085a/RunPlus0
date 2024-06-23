@@ -12,19 +12,19 @@ import Image from "next/image";
 import Ourteam from "@/components/ourteam";
 
 const Card = ({ image, heading, description }) => (
-  <div className="bg-white hover:bg-[#EDEEF0] flex items-center justify-center m-1 font-montserrat hover:shadow-md hover:border px-10 py-10 h-[28rem] rounded-2xl scrollanimation animate-appear">
-    <div className=" flex flex-col gap-10 items-center justify-center">
-      <div>
-        <Image src={image} alt="" />
-      </div>
-      <div>
-        <h1 className=" font-bold text-3xl">{heading}</h1>
-      </div>
-      <div>
-        <p className=" font-normal text-2xl text-center">{description}</p>
+    <div className="bg-white relative card-wrapper flex items-center justify-center m-1 font-montserrat hover:shadow-md px-5 sm:px-10 py-5 sm:py-10 h-96 sm:h-[28rem] rounded-2xl scrollanimation animate-appear overflow-hidden">
+      <div className="card-content flex flex-col gap-5 sm:gap-10 items-center justify-center">
+        <div>
+          <Image src={image} alt="" />
+        </div>
+        <div>
+          <h1 className=" font-bold text-3xl">{heading}</h1>
+        </div>
+        <div>
+          <p className=" font-normal text-xl sm:text-2xl text-center">{description}</p>
+        </div>
       </div>
     </div>
-  </div>
 );
 
 Card.propTypes = {
@@ -75,13 +75,13 @@ const About = () => {
   return (
     <main>
       <section id="hero_about">
-        <div className=" mx-20 my-5">
+        <div className="mx-5 sm:mx-20 my-5">
           <div className="bg-cover bg-center bg-[url('https://i.ibb.co/C5hVCqf/background3.png')] flex items-center justify-center font-montserrat rounded-2xl text-[#FFFFFF] scrollanimation animate-appear">
-            <div className="w-11/12 sm:w-3/4 flex flex-col my-20 gap-5 items-center justify-center">
+            <div className="w-11/12 sm:w-3/4 flex flex-col my-10 sm:my-20 gap-5 items-center justify-center">
               <h1 className=" font-semibold text-3xl sm:font-extrabold sm:text-5xl lg:text-7xl">
                 About Us
               </h1>
-              <p className=" text-center font-medium text-2xl sm:text-3xl">
+              <p className=" text-center font-medium text-xl sm:text-3xl">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
@@ -90,17 +90,17 @@ const About = () => {
         </div>
       </section>
       <section id="about_hero">
-        <div className="flex flex-col lg:flex-row mx-20 my-24 lg:items-center justify-center gap-12">
+        <div className="flex flex-col lg:flex-row mx-5 sm:mx-20 my-24 lg:items-center justify-center gap-12">
           <div className=" flex flex-col lg:w-2/4 gap-8">
             <div className=" rounded-3xl overflow-hidden scrollanimation animate-appear">
               <Image src={AboutHeroImg} alt="" />
             </div>
             <div className="flex flex-row flex-wrap lg:flex-nowrap gap-8">
-              <div className="bg-gradient-to-r lg:w-1/3 from-sky-200 to-sky-500 h-56 lg:h-32 xl:h-56 flex flex-col items-center justify-center rounded-3xl scrollanimation animate-appear">
-                <p className="font-extrabold lg:font-bold lg:text-5xl xl:text-7xl xl:font-extralight text-7xl text-white">
+              <div className="bg-gradient-to-r lg:w-1/3 from-sky-200 to-sky-500 h-36 p-2 sm:h-56 lg:h-32 xl:h-56 flex flex-col items-center justify-center rounded-3xl scrollanimation animate-appear">
+                <p className="font-extrabold lg:font-bold lg:text-5xl xl:text-7xl xl:font-extralight text-4xl sm:text-7xl text-white">
                   500K
                 </p>
-                <p className=" font-bold text-xl lg:text-lg xl:text-xl text-white">
+                <p className=" font-bold text-base sm:text-xl lg:text-lg xl:text-xl text-white">
                   Daily Active Users
                 </p>
               </div>
@@ -117,7 +117,7 @@ const About = () => {
                 </p>
               </div>
               <div className="scrollanimation animate-appear">
-                <p className=" font-normal text-2xl">
+                <p className=" font-normal text-xl sm:text-2xl">
                   Building an enterprise level site doesn&apos;t need nightmare
                   or cost your thousands. RunPlus is purpose built for ease of
                   use and completxability to create even the most powerful of
@@ -154,10 +154,10 @@ const About = () => {
                   </svg>
                 </div>
                 <div className="flex flex-col gap-5">
-                  <p className=" font-medium text-3xl">
+                  <p className=" font-medium text-xl sm:text-3xl">
                     How technology started
                   </p>
-                  <p className=" font-normal text-2xl">
+                  <p className=" font-normal text-base sm:text-2xl">
                     Building an enterprisedoesn&apos;t need your thousands.
                   </p>
                 </div>
@@ -193,15 +193,15 @@ const About = () => {
                   </svg>
                 </div>
                 <div className="flex flex-col gap-5">
-                  <p className=" font-medium text-3xl">Endless Possibilities</p>
-                  <p className=" font-normal text-2xl">
+                  <p className=" font-medium text-xl sm:text-3xl">Endless Possibilities</p>
+                  <p className=" font-normal text-base sm:text-2xl">
                     Building an enterprisedoesn&apos;t need your thousands.
                   </p>
                 </div>
               </div>
             </div>
             <div className="scrollanimation animate-appear">
-              <button className=" relative rounded-full bg-[#002548] text-white h-[4.5rem] w-60 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+              <button className=" relative rounded-full bg-[#002548] text-white h-14 w-48 sm:h-[4.5rem] sm:w-60 border-2 overflow-hidden before:rounded-full font-semibold text-lg sm:text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                 <span className="relative z-10">Join our Team</span>
               </button>
             </div>
@@ -210,9 +210,9 @@ const About = () => {
       </section>
       <section id="brand_world">
         <div className="font-montserrat flex items-center mt-36 mb-36 justify-center">
-          <div className="w-2/3 flex flex-col gap-10">
+          <div className="w-[90%] sm:w-2/3 flex flex-col gap-10">
             <div className="scrollanimation animate-appear">
-              <p className=" font-extrabold text-4xl sm:text-5xl text-center">
+              <p className=" font-extrabold text-3xl sm:text-5xl text-center">
                 Businesses all over the world trust Buffer to build their brand
               </p>
             </div>
@@ -260,36 +260,35 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/* <Ourteam /> */}
       <Ourteam />
       <section id="investors">
         <div className=" font-montserrat flex items-center my-20 justify-center">
-          <div className=" w-3/4">
+          <div className="w-[90%] sm:w-3/4">
             <div className="flex flex-col mb-10 gap-10 scrollanimation animate-appear">
-              <p className=" font-extrabold text-6xl text-center">
+              <p className=" font-extrabold text-5xl sm:text-6xl text-center">
                 Our Investors
               </p>
             </div>
             <div className="flex flex-col gap-5">
               <div className="flex flex-row flex-wrap lg:flex-nowrap gap-5">
-                <div className=" bg-[#F6F6F6] scrollanimation animate-appear">
-                  <div className="flex flex-col gap-4 py-12 px-10 lg:px-24">
+                <div className="relative value-card-wrapper bg-[#F6F6F6] scrollanimation animate-appear overflow-hidden">
+                  <div className="value-card-content flex flex-col gap-4 py-8 sm:py-12 px-10 lg:px-24">
                     <p className=" font-extrabold text-4xl text-[#5571FF]">
                       facebook
                     </p>
-                    <p className=" font-normal text-2xl text-[#808080]">
+                    <p className=" font-normal text-xl sm:text-2xl text-[#808080]">
                       One of a select group of Facebook Marketing Partners in
                       Advertising Technology and Management.Building the ddfgan
                       enterprisedoesn&apos;t need nightmare.
                     </p>
                   </div>
                 </div>
-                <div className=" bg-[#F6F6F6] scrollanimation animate-appear">
-                  <div className="flex flex-col gap-4 py-12 px-10 lg:px-24">
+                <div className="relative value-card-wrapper bg-[#F6F6F6] scrollanimation animate-appear overflow-hidden">
+                  <div className="value-card-content flex flex-col gap-4 py-8 sm:py-12 px-10 lg:px-24">
                     <p className=" font-extrabold text-4xl text-[#2F2F2F]">
                       Ini<span className="text-[#5571FF]">_</span>tech
                     </p>
-                    <p className=" font-normal text-2xl text-[#808080]">
+                    <p className=" font-normal text-xl sm:text-2xl text-[#808080]">
                       One of a select group of Facebook Marketing Partners in
                       Advertising Technology and Management.Building the ddfgan
                       enterprisedoesn&apos;t need nightmare.
@@ -298,8 +297,8 @@ const About = () => {
                 </div>
               </div>
               <div className="flex flex-row flex-wrap  lg:flex-nowrap gap-5">
-                <div className=" bg-[#F6F6F6] scrollanimation animate-appear">
-                  <div className="flex flex-col gap-4 py-12 px-10 lg:px-24">
+                <div className="relative value-card-wrapper bg-[#F6F6F6] scrollanimation animate-appear overflow-hidden">
+                  <div className="value-card-content flex flex-col gap-4 py-8 sm:py-12 px-10 lg:px-24">
                     <p className=" font-extrabold text-5xl">
                       <span className="text-[#4285F4]">G</span>
                       <span className="text-[#EA4335]">o</span>
@@ -308,19 +307,19 @@ const About = () => {
                       <span className="text-[#31C65B]">l</span>
                       <span className="text-[#EA4335]">e</span>
                     </p>
-                    <p className=" font-normal text-2xl text-[#808080]">
+                    <p className=" font-normal text-xl sm:text-2xl text-[#808080]">
                       One of a select group of Facebook Marketing Partners in
                       Advertising Technology and Management.Building the ddfgan
                       enterprisedoesn&apos;t need nightmare.
                     </p>
                   </div>
                 </div>
-                <div className=" bg-[#F6F6F6] scrollanimation animate-appear">
-                  <div className="flex flex-col gap-4 py-12 px-10 lg:px-24">
+                <div className="relative value-card-wrapper bg-[#F6F6F6] scrollanimation animate-appear overflow-hidden">
+                  <div className="value-card-content flex flex-col gap-4 py-8 sm:py-12 px-10 lg:px-24">
                     <p className=" font-extrabold text-4xl text-[#FF6565]">
                       Umbre<span className="text-[#7C3EFF]">lla</span>
                     </p>
-                    <p className=" font-normal text-2xl text-[#808080]">
+                    <p className=" font-normal text-xl sm:text-2xl text-[#808080]">
                       One of a select group of Facebook Marketing Partners in
                       Advertising Technology and Management.Building the ddfgan
                       enterprisedoesn&apos;t need nightmare.
@@ -332,8 +331,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section>
-      </section>
+      <section></section>
     </main>
   );
 };

@@ -12,9 +12,15 @@ module.exports = {
       animation: {
         blob: "blob 7s infinite",
         till: "till 10s infinite linear",
-        appear: "appear linear"
+        appear: "appear linear",
+        "border-spin": "border-spin 15s linear infinite",
       },
       keyframes: {
+        "border-spin": {
+          "100%": {
+            transform: 'rotate(-360deg)',
+          },
+        },
         appear: {
           '0%': { opacity: 0, transform: 'scale(0.5)' },
           '100%': { opacity: 1, transform: 'scale(1)' },

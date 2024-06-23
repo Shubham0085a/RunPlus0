@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   motion,
   useMotionTemplate,
@@ -76,6 +76,21 @@ const ROTATION_RANGE = 15;
 const HALF_ROTATION_RANGE = 15 / 2;
 
 const Home = () => {
+
+  const tiltRef = useRef(null);
+
+  useEffect(() => {
+    if (tiltRef.current) {
+      VanillaTilt.init(tiltRef.current, {
+        max: 25,
+        speed: 400,
+        glare: true,
+        'max-glare': 0.5,
+      });
+    }
+    return () => tiltRef.current?.vanillaTilt?.destroy();
+  }, []);
+
   const cards = [
     {
       title: "Publish",
@@ -158,14 +173,14 @@ const Home = () => {
   return (
     <main className=" cursor-default">
       <section id="hero">
-        <div className="flex flex-col items-center justify-center gap-10 h-auto xl:gap-0 xl:flex-row font-montserrat mx-10 mt-10">
-          <div className=" relative lg:ml-[7.63rem] w-4/5 xl:w-[55%] ml-10">
-            <div className=" absolute top-40 left-14 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-purple-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob"></div>
-            <div className=" absolute top-28 right-72 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-yellow-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob animation-delay-2000"></div>
-            <div className=" absolute bottom-32 left-56 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-pink-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob animation-delay-4000"></div>
-            <div className=" relative flex flex-col gap-[3.13rem] scrollanimation animate-appear">
+        <div className="flex flex-col items-center justify-center gap-10 h-auto xl:gap-0 xl:flex-row font-montserrat sm:mx-10 mt-10">
+          <div className=" relative lg:ml-[7.63rem] w-4/5 xl:w-[55%] sm:ml-10">
+            <div className=" absolute top-10 left-4 sm:top-40 sm:left-14 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-purple-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob"></div>
+            <div className=" absolute top-28 right-20 sm:top-28 sm:right-72 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-yellow-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob animation-delay-2000"></div>
+            <div className=" absolute bottom-56 left-16 sm:bottom-32 sm:left-56 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-pink-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob animation-delay-4000"></div>
+            <div className=" relative flex flex-col gap-6 sm:gap-[3.13rem] scrollanimation animate-appear">
               <div>
-                <h1 className=" font-semibold md:font-bold text-4xl md:text-7xl text-[#002548] leading-tight">
+                <h1 className=" font-semibold md:font-bold text-2xl sm:text-4xl md:text-7xl text-[#002548] leading-tight">
                   <span className="bg-gradient-to-r from-[#0094FF] via-[#25CBFF] to-[#20FFCA] inline-block text-transparent bg-clip-text">
                     Develop Features,
                     <br />
@@ -175,7 +190,7 @@ const Home = () => {
                 </h1>
               </div>
               <div>
-                <p className="text-[#515151] text-2xl leading-normal">
+                <p className="text-[#515151] sm:text-2xl text-lg leading-normal">
                   Our vision is to establish a dynamic, global marketplace that
                   serves as a hub for endless opportunities.
                 </p>
@@ -208,17 +223,17 @@ const Home = () => {
               </Marquee>
             </div>
           </div>
-          <div className=" w-[40%] h-auto scrollanimation animate-appear">
+          <div className=" sm:w-[40%] h-auto scrollanimation animate-appear">
             <Image src={dashboard} alt="" />
           </div>
         </div>
       </section>
       <section id="features">
         <div className=" font-montserrat my-24">
-          <h1 className=" text-center font-extrabold text-5xl mb-16 text-[#002548] scrollanimation animate-appear">
+          <h1 className=" text-center font-extrabold text-3xl sm:text-5xl sm:mb-16 text-[#002548] scrollanimation animate-appear">
             Simple, yet Powerful Features
           </h1>
-          <div className=" relative container mt-10 mx-auto p-4">
+          <div className=" relative container sm:mt-10 mx-auto p-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {cards.map((card, index) => (
                 <Card
@@ -234,16 +249,16 @@ const Home = () => {
         </div>
       </section>
       <section id="mission">
-        <div className="my-10 mx-20 font-montserrat flex flex-col lg:flex-row justify-center gap-20 lg:gap-5">
+        <div className="my-10 mx-10 sm:mx-20 font-montserrat flex flex-col lg:flex-row justify-center gap-20 lg:gap-5">
           <div className=" w-auto sm:w-[30rem] md:w-[35rem] lg:w-[40rem] xl:w-[44rem] mt-5 flex flex-col gap-5">
             <div className="flex flex-col gap-5 scrollanimation animate-appear">
               <div>
-                <h1 className="text-[#002548] text-6xl font-extrabold">
+                <h1 className="text-[#002548] text-5xl sm:text-6xl font-extrabold">
                   Our Mission
                 </h1>
               </div>
               <div>
-                <p className=" font-normal text-2xl text-[#808080]">
+                <p className="font-normal text-lg sm:text-2xl text-[#808080]">
                   Creating a Dynamic, Global Hub for Endless Opportunities and
                   Knowledge Exchange. Empowering the Workforce with an Intuitive
                   and Culturally Inclusive marketplace
@@ -266,17 +281,17 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-5">
-            <div data-tilt className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl scrollanimation animate-appear">
-              <Image src={mission1} alt="" className="h-[25rem] w-auto" />
+            <div data-tilt className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl scrollanimation animate-appear" ref={tiltRef}>
+              <Image src={mission1} alt="" className="h-80 sm:h-[25rem] w-auto" />
             </div>
-            <div data-tilt className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl scrollanimation animate-appear">
-              <Image src={mission2} alt="" className="h-[25rem] w-auto" />
+            <div data-tilt className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl scrollanimation animate-appear" ref={tiltRef}>
+              <Image src={mission2} alt="" className="h-80 sm:h-[25rem] w-auto" />
             </div>
           </div>
         </div>
       </section>
       <section id="working_process">
-        <div className=" flex flex-col lg:flex-row font-montserrat items-center gap-10 lg:gap-0 lg:items-stretch justify-center mx-10 h-auto my-20">
+        <div className=" flex flex-col lg:flex-row font-montserrat items-center gap-10 lg:gap-0 lg:items-stretch justify-center sm:mx-10 h-auto my-20">
           <motion.div
             ref={ref}
             onMouseMove={handleMouseMove}
@@ -292,17 +307,17 @@ const Home = () => {
                 transform: "translateZ(50px)",
                 transformStyle: "preserve-3d",
               }}
-              className="bg-cover bg-center bg-[url('https://i.ibb.co/V26NFdR/Background1.png')] rounded-3xl pl-5 w-full h-full flex items-center justify-center"
+              className="bg-cover bg-center bg-[url('https://i.ibb.co/V26NFdR/Background1.png')] rounded-3xl sm:pl-5 w-full h-full flex items-center justify-center"
             >
               <div className="w-auto h-auto">
-                <div className="flex p-10 flex-col gap-10">
+                <div className="flex p-5 sm:p-10 flex-col gap-10">
                   <div>
-                    <h1 className="text-[#FFFFFF] text-5xl font-extrabold">
+                    <h1 className="text-[#FFFFFF] text-3xl sm:text-5xl font-extrabold">
                       Our Working Process - How We Work For Our Customers
                     </h1>
                   </div>
                   <div>
-                    <p className=" font-normal text-2xl text-[#FFFFFF]">
+                    <p className=" font-normal text-xl sm:text-2xl text-[#FFFFFF]">
                       We currently support Facebook, Instagram, LinkedIn and
                       Twitter. More to come.
                     </p>
@@ -312,7 +327,7 @@ const Home = () => {
                       transform: "translateZ(75px)",
                     }}
                   >
-                    <button className=" relative rounded-full h-[4.688rem] w-[14.875rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-white px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className=" relative rounded-full h-12 w-40 sm:h-[4.688rem] sm:w-[14.875rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-xl sm:text-2xl bg-white px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Get Started</span>
                     </button>
                   </div>
@@ -324,40 +339,40 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-4">
               <div className=" flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
                 <h1 className=" font-black text-5xl text-[#002548]">01</h1>
-                <p className=" font-bold text-4xl text-[#002548]">
+                <p className=" font-bold text-3xl sm:text-4xl text-[#002548]">
                   Create your free account
                 </p>
-                <p className=" font-normal text-xl text-[#808080]">
+                <p className=" font-normal text-lg sm:text-xl text-[#808080]">
                   Building ddfgan enterprisedoesn&apos;t need nightmare or cost
                   your thousands. Felix is purpose built.
                 </p>
               </div>
               <div className=" flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
                 <h1 className=" font-black text-5xl text-[#002548]">02</h1>
-                <p className=" font-bold text-4xl text-[#002548]">
+                <p className=" font-bold text-3xl sm:text-4xl text-[#002548]">
                   Connect your channels
                 </p>
-                <p className=" font-normal text-xl text-[#808080]">
+                <p className=" font-normal text-lg sm:text-xl text-[#808080]">
                   Building ddfgan enterprisedoesn&apos;t need nightmare or cost
                   your thousands. Felix is purpose built.
                 </p>
               </div>
               <div className=" flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
                 <h1 className=" font-black text-5xl text-[#002548]">03</h1>
-                <p className=" font-bold text-4xl text-[#002548]">
+                <p className=" font-bold text-3xl sm:text-4xl text-[#002548]">
                   Schedule your posts
                 </p>
-                <p className=" font-normal text-xl text-[#808080]">
+                <p className=" font-normal text-lg sm:text-xl text-[#808080]">
                   Building ddfgan enterprisedoesn&apos;t need nightmare or cost
                   your thousands. Felix is purpose built.
                 </p>
               </div>
               <div className=" flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
                 <h1 className=" font-black text-5xl text-[#002548]">04</h1>
-                <p className=" font-bold text-4xl text-[#002548]">
+                <p className=" font-bold text-3xl sm:text-4xl text-[#002548]">
                   Publish & get your planning on point
                 </p>
-                <p className=" font-normal text-xl text-[#808080]">
+                <p className=" font-normal text-lg sm:text-xl text-[#808080]">
                   Building ddfgan enterprisedoesn&apos;t need nightmare or cost
                   your thousands. Felix is purpose built.
                 </p>
@@ -372,12 +387,12 @@ const Home = () => {
           <div className="flex flex-col gap-5 lg:gap-0 lg:flex-row items-start lg:items-center text-[#002548] justify-around scrollanimation animate-appear">
             <div className=" lg:w-[55rem] flex flex-col gap-5">
               <div>
-                <h1 className=" font-extrabold text-6xl">
+                <h1 className=" font-extrabold text-4xl sm:text-6xl">
                   Latest News and Articles
                 </h1>
               </div>
               <div>
-                <p className=" font-normal text-2xl text-[#808080]">
+                <p className=" font-normal text-xl sm:text-2xl text-[#808080]">
                   We currently support Facebook, Instagram, LinkedIn and
                   Twitter. More to come. Felix is purpose built for ease of use
                   and complete flexability.
@@ -385,7 +400,7 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <button className=" relative rounded-full h-[4.688rem] w-[17.313rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-white px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+              <button className=" relative rounded-full h-14 w-60 sm:h-[4.688rem] sm:w-[17.313rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-xl sm:text-2xl bg-white px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                 <span className="relative z-10">See More News</span>
               </button>
             </div>

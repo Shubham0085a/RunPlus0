@@ -16,7 +16,7 @@ const data = [
   },
   {
     id: 2,
-    name: "John D.",
+    name: "John D.,",
     title: "Chief Technology Officer",
     img: TestimonialImg,
     review:
@@ -24,7 +24,7 @@ const data = [
   },
   {
     id: 3,
-    name: "Emily R.",
+    name: "Emily R.,",
     title: "Senior Product Manager",
     img: TestimonialImg,
     review:
@@ -32,7 +32,7 @@ const data = [
   },
   {
     id: 4,
-    name: "Michael S.",
+    name: "Michael S.,",
     title: "Lead Software Engineer",
     img: TestimonialImg,
     review:
@@ -40,7 +40,7 @@ const data = [
   },
   {
     id: 5,
-    name: "Jessica B.",
+    name: "Jessica B.,",
     title: "Director of Operations",
     img: TestimonialImg,
     review:
@@ -48,7 +48,7 @@ const data = [
   },
   {
     id: 6,
-    name: "David H.",
+    name: "David H.,",
     title: "Business Analyst",
     img: TestimonialImg,
     review:
@@ -56,7 +56,7 @@ const data = [
   },
   {
     id: 7,
-    name: "Sophia K.",
+    name: "Sophia K.,",
     title: "Marketing Coordinator",
     img: TestimonialImg,
     review:
@@ -64,7 +64,7 @@ const data = [
   },
   {
     id: 8,
-    name: "James L.",
+    name: "James L.,",
     title: "Customer Success Manager",
     img: TestimonialImg,
     review:
@@ -72,7 +72,7 @@ const data = [
   },
   {
     id: 9,
-    name: "Olivia P.",
+    name: "Olivia P.,",
     title: "Graphic Designer",
     img: TestimonialImg,
     review:
@@ -80,7 +80,7 @@ const data = [
   },
   {
     id: 10,
-    name: "Ethan W.",
+    name: "Ethan W.,",
     title: "Financial Advisor",
     img: TestimonialImg,
     review:
@@ -88,7 +88,7 @@ const data = [
   },
   {
     id: 11,
-    name: "Ava T.",
+    name: "Ava T.,",
     title: "Human Resources Manager",
     img: TestimonialImg,
     review:
@@ -119,7 +119,7 @@ const Slider = () => {
   return (
     <section className="section font-montserrat h-auto bg-sky-300/10">
       <div className="title scrollanimation animate-appear">
-        <h2 className=" font-extrabold text-5xl text-[#2F2F2F] pt-10">
+        <h2 className=" font-extrabold text-3xl sm:text-5xl text-[#2F2F2F] pt-10">
           Our Happy Family
         </h2>
       </div>
@@ -142,10 +142,9 @@ const Slider = () => {
                 <Image src={img} alt={name} className="person-img" />
               </div>
               <div className="flex flex-row items-center justify-center scrollanimation animate-appear">
-                <h4 className=" font-extrabold text-xl">{name}</h4>
-                <p className=" text-lg">{title}</p>
+              <p><span className=" font-extrabold text-xl">{name}</span> <span className=" text-lg">{title}</span></p>
               </div>
-              <p className=" max-w-[35em] mx-auto mt-8 text-[#808080] font-normal text-2xl leading-normal scrollanimation animate-appear">
+              <p className=" max-w-[35em] mx-auto mt-8 text-[#808080] font-normal text-lg sm:text-2xl h-auto leading-normal scrollanimation animate-appear">
                 {review}
               </p>
             </article>

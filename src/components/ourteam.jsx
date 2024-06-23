@@ -1,42 +1,57 @@
-
-import Manjunath from "../assets/Manjunath.png";
-import Raghunath from "../assets/Raghunath.png";
-import Prashanthi from "../assets/Prashanthi.png";
-import Image from "next/image";
-import VanillaTilt from "vanilla-tilt";
+"use client";
+import React, { useEffect, useRef } from 'react';
+import Manjunath from '../assets/Manjunath.png';
+import Raghunath from '../assets/Raghunath.png';
+import Prashanthi from '../assets/Prashanthi.png';
+import Image from 'next/image';
+import VanillaTilt from 'vanilla-tilt';
 
 const Ourteam = () => {
+  const tiltRef = useRef(null);
+
+  useEffect(() => {
+    if (tiltRef.current) {
+      VanillaTilt.init(tiltRef.current, {
+        max: 25,
+        speed: 400,
+        glare: true,
+        'max-glare': 0.5,
+      });
+    }
+    return () => tiltRef.current?.vanillaTilt?.destroy();
+  }, []);
 
   return (
     <section id="our_team">
-      <div className="bg-cover bg-center bg-[url('https://i.ibb.co/gzJKtCJ/Background2.png')] pt-16 px-10 font-montserrat text-[#FFFFFF]">
-        <div className="flex flex-col gap-10 mx-10 md:mx-0 md:gap-0 md:flex-row items-center justify-around scrollanimation animate-appear">
+      <div className="bg-cover bg-center bg-[url('https://i.ibb.co/gzJKtCJ/Background2.png')] pt-16 px-5 sm:px-10 font-montserrat text-[#FFFFFF]">
+        <div className="flex flex-col gap-10 mx-5 sm:mx-10 md:mx-0 md:gap-0 md:flex-row items-center justify-around scrollanimation animate-appear">
           <div className=" w-auto lg:w-[43rem] flex flex-col gap-5">
             <div>
-              <h1 className=" font-extrabold text-6xl">Our Team</h1>
+              <h1 className=" font-extrabold text-5xl sm:text-6xl">Our Team</h1>
             </div>
             <div>
-              <p className=" font-normal text-2xl">
+              <p className=" font-normal text-xl sm:text-2xl">
                 Building an enterprise level site doesn&apos;t need nightmare or
                 cost your thousands. Runplus is purpose built for that
               </p>
             </div>
           </div>
           <div>
-            <button className=" relative rounded-full h-[4.688rem] w-[17.313rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl bg-white px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-700 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+            <button className=" relative rounded-full h-14 w-56 sm:h-[4.688rem] sm:w-[17.313rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-xl sm:text-2xl bg-white px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-700 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
               <span className="relative z-10">Join Our Team</span>
             </button>
           </div>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-12 py-12">
           <div>
-            <div data-tilt className="scrollanimation animate-appear">
+            <div data-tilt className="scrollanimation animate-appear rounded-2xl" ref={tiltRef}>
               <Image src={Manjunath} alt="" className="w-[27rem]"/>
             </div>
             <div className=" flex flex-col gap-5 mt-5">
               <p className=" font-bold text-3xl text-center scrollanimation animate-appear">Manjunath</p>
               <p className=" font-medium text-base text-center scrollanimation animate-appear">CEO</p>
               <div className=" flex flex-row items-center justify-center gap-5 scrollanimation animate-appear">
+                {/* SVG icons here */}
                 <svg
                   width="12"
                   height="21"
@@ -77,13 +92,14 @@ const Ourteam = () => {
             </div>
           </div>
           <div>
-            <div data-tilt className="scrollanimation animate-appear">
+            <div data-tilt className="scrollanimation animate-appear rounded-2xl" ref={tiltRef}>
               <Image src={Prashanthi} alt="" className="w-[27rem]"/>
             </div>
             <div className=" flex flex-col gap-5 mt-5">
               <p className=" font-bold text-3xl text-center scrollanimation animate-appear">Prashanthi</p>
               <p className=" font-medium text-base text-center scrollanimation animate-appear">Co-Founder</p>
               <div className=" flex flex-row items-center justify-center gap-5 scrollanimation animate-appear">
+                {/* SVG icons here */}
                 <svg
                   width="12"
                   height="21"
@@ -124,13 +140,14 @@ const Ourteam = () => {
             </div>
           </div>
           <div>
-            <div data-tilt className="scrollanimation animate-appear">
+            <div data-tilt className="scrollanimation animate-appear rounded-2xl" ref={tiltRef}>
               <Image src={Raghunath} alt="" className="w-[27rem]"/>
             </div>
             <div className=" flex flex-col gap-5 mt-5">
               <p className=" font-bold text-3xl text-center scrollanimation animate-appear">Raghunath</p>
               <p className=" font-medium text-base text-center scrollanimation animate-appear">Co-Founder</p>
               <div className=" flex flex-row items-center justify-center gap-5 scrollanimation animate-appear">
+                {/* SVG icons here */}
                 <svg
                   width="12"
                   height="21"

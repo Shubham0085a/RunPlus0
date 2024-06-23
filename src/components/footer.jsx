@@ -20,8 +20,8 @@ const Footer = () => {
             </div>
             </div>
             <div className=" flex flex-col gap-5 items-center justify-center max-w-sm scrollanimation animate-appear">
-              <h1 className=" font-medium text-2xl">Quick Links</h1>
-              <div className="text-[#D7D7D7] flex flex-col gap-3">
+              <h1 className=" font-semibold sm:font-medium text-4xl sm:text-2xl">Quick Links</h1>
+              <div className="text-[#D7D7D7] flex text-2xl sm:text-base flex-col gap-3">
                 <Link href="">About Us</Link>
                 <Link href="">Pricing</Link>
                 <Link href="">Services</Link>
@@ -31,8 +31,8 @@ const Footer = () => {
           </div>
           <div className="flex flex-col sm:flex-row gap-10 sm:gap-40 md:gap-10  mx-10 2xl:gap-16 lg:mt-28 mb-10">
             <div className=" flex flex-col gap-5 items-center justify-start max-w-sm scrollanimation animate-appear">
-              <h1 className=" font-medium text-2xl">Quick Links</h1>
-              <div className="text-[#D7D7D7] flex flex-col gap-3">
+              <h1 className=" font-semibold sm:font-medium text-4xl sm:text-2xl">Quick Links</h1>
+              <div className="text-[#D7D7D7] text-2xl sm:text-base flex flex-col gap-3">
                 <Link href="">About Us</Link>
                 <Link href="">Pricing</Link>
                 <Link href="">Services</Link>
@@ -41,8 +41,8 @@ const Footer = () => {
             </div>
             <div className=" flex flex-col items-center max-w-xs justify-start gap-5 scrollanimation animate-appear">
               <div className="flex flex-col gap-5 max-w-xs">
-                <h1 className=" font-medium text-2xl">Contact us</h1>
-                <div className="text-[#D7D7D7] flex flex-col gap-3 pr-9">
+                <h1 className=" font-semibold text-4xl sm:font-medium sm:text-2xl">Contact us</h1>
+                <div className="text-[#D7D7D7] text-2xl sm:text-base flex flex-col gap-3 pr-9">
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry.{" "}
