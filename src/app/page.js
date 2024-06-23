@@ -42,9 +42,7 @@ const Card = ({ title, image, heading, description }) => (
         </h3>
       </div>
       <div>
-        <p className=" mt-10 font-bold text-2xl text-[#002548]">
-          {heading}
-        </p>
+        <p className=" mt-10 font-bold text-2xl text-[#002548]">{heading}</p>
       </div>
       <div>
         <p className=" mt-5 text-[#808080] text-lg">{description}</p>
@@ -52,7 +50,7 @@ const Card = ({ title, image, heading, description }) => (
       <div className=" border-t-2 border-[#DCDCDC] mt-10">
         <div className=" h-[4.7rem] mt-4 flex flex-row items-center justify-between">
           <div>
-            <Image src={image} alt="" className="w-14"/>
+            <Image src={image} alt="" className="w-14" />
           </div>
           <div>
             <button className=" relative rounded-full h-[4rem] w-[13.8rem] sm:h-[3.5rem] sm:w-[9rem] xl:h-[4rem] xl:w-[13.8rem] border-2 overflow-hidden before:rounded-full font-semibold hover:font-bold text-2xl sm:font-medium sm:hover:font-semibold sm:text-lg xl:font-semibold xl:hover:font-bold xl:text-2xl bg-gradient-to-r from-[#76CDFF] to-[#008DDD] px-3 text-[#002548] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#002548] before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
@@ -76,7 +74,6 @@ const ROTATION_RANGE = 15;
 const HALF_ROTATION_RANGE = 15 / 2;
 
 const Home = () => {
-
   const tiltRef = useRef(null);
 
   useEffect(() => {
@@ -85,7 +82,7 @@ const Home = () => {
         max: 25,
         speed: 400,
         glare: true,
-        'max-glare': 0.5,
+        "max-glare": 0.5,
       });
     }
     return () => tiltRef.current?.vanillaTilt?.destroy();
@@ -281,11 +278,27 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-5">
-            <div data-tilt className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl scrollanimation animate-appear" ref={tiltRef}>
-              <Image src={mission1} alt="" className="h-80 sm:h-[25rem] w-auto" />
+            <div
+              data-tilt
+              className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl scrollanimation animate-appear"
+              ref={tiltRef}
+            >
+              <Image
+                src={mission1}
+                alt=""
+                className="h-80 sm:h-[25rem] w-auto"
+              />
             </div>
-            <div data-tilt className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl scrollanimation animate-appear" ref={tiltRef}>
-              <Image src={mission2} alt="" className="h-80 sm:h-[25rem] w-auto" />
+            <div
+              data-tilt
+              className=" hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl scrollanimation animate-appear"
+              ref={tiltRef}
+            >
+              <Image
+                src={mission2}
+                alt=""
+                className="h-80 sm:h-[25rem] w-auto"
+              />
             </div>
           </div>
         </div>
@@ -335,19 +348,22 @@ const Home = () => {
               </div>
             </div>
           </motion.div>
-          <div className=" w-auto lg:w-[56.5rem] h-auto ml-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-4">
-              <div className=" flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
-                <h1 className=" font-black text-5xl text-[#002548]">01</h1>
-                <p className=" font-bold text-3xl sm:text-4xl text-[#002548]">
-                  Create your free account
-                </p>
-                <p className=" font-normal text-lg sm:text-xl text-[#808080]">
-                  Building ddfgan enterprisedoesn&apos;t need nightmare or cost
-                  your thousands. Felix is purpose built.
-                </p>
+          <div className=" w-auto lg:w-[56.5rem] h-auto ml-2 sm:ml-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-2">
+              <div className="relative working-card-wrapper overflow-hidden">
+                <div className="working-card-content flex flex-col p-3 items-start gap-6 justify-center scrollanimation animate-appear">
+                  <h1 className=" font-black text-5xl text-[#002548]">01</h1>
+                  <p className=" font-bold text-3xl sm:text-4xl text-[#002548]">
+                    Create your free account
+                  </p>
+                  <p className=" font-normal text-lg sm:text-xl text-[#808080]">
+                    Building ddfgan enterprisedoesn&apos;t need nightmare or
+                    cost your thousands. Felix is purpose built.
+                  </p>
+                </div>
               </div>
-              <div className=" flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
+              <div className="relative working-card-wrapper overflow-hidden">
+              <div className="working-card-content p-3 flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
                 <h1 className=" font-black text-5xl text-[#002548]">02</h1>
                 <p className=" font-bold text-3xl sm:text-4xl text-[#002548]">
                   Connect your channels
@@ -357,7 +373,9 @@ const Home = () => {
                   your thousands. Felix is purpose built.
                 </p>
               </div>
-              <div className=" flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
+              </div>
+              <div className="relative working-card-wrapper overflow-hidden">
+              <div className="working-card-content p-3 flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
                 <h1 className=" font-black text-5xl text-[#002548]">03</h1>
                 <p className=" font-bold text-3xl sm:text-4xl text-[#002548]">
                   Schedule your posts
@@ -367,7 +385,9 @@ const Home = () => {
                   your thousands. Felix is purpose built.
                 </p>
               </div>
-              <div className=" flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
+              </div>
+              <div className="relative working-card-wrapper overflow-hidden">
+              <div className="working-card-content p-3 flex flex-col items-start gap-6 justify-center scrollanimation animate-appear">
                 <h1 className=" font-black text-5xl text-[#002548]">04</h1>
                 <p className=" font-bold text-3xl sm:text-4xl text-[#002548]">
                   Publish & get your planning on point
@@ -376,6 +396,7 @@ const Home = () => {
                   Building ddfgan enterprisedoesn&apos;t need nightmare or cost
                   your thousands. Felix is purpose built.
                 </p>
+              </div>
               </div>
             </div>
           </div>
