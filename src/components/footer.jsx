@@ -6,14 +6,14 @@ const Footer = () => {
   return (
     <section id="footer">
       <div className=" font-montserrat text-white flex flex-col bg-[#002548]">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10  mx-10 2xl:gap-16 mt-2 mb-10">
-          <div className="flex flex-col sm:flex-row gap-20 lg:gap-10  mx-10 2xl:gap-16 mt-16 lg:mt-28 mb-10">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 mx-5 sm:mx-10 2xl:gap-16 mt-2 mb-10">
+          <div className="flex flex-col sm:flex-row gap-20 lg:gap-10 mx-5 sm:mx-10 2xl:gap-16 mt-16 lg:mt-28 mb-10">
             <div className=" max-w-sm scrollanimation animate-appear">
             <div>
               <Image src={Footerlogo} alt="" />
             </div>
             <div>
-              <p className=" font-normal text-xl mt-5 text-[#D7D7D7]">
+              <p className=" font-normal text-2xl mt-5 text-[#D7D7D7]">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.{" "}
               </p>
@@ -29,7 +29,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-10 sm:gap-40 md:gap-10  mx-10 2xl:gap-16 lg:mt-28 mb-10">
+          <div className="flex flex-col sm:flex-row gap-10 sm:gap-40 md:gap-10 mx-5 sm:mx-10 2xl:gap-16 lg:mt-28 mb-10">
             <div className=" flex flex-col gap-5 items-center justify-start max-w-sm scrollanimation animate-appear">
               <h1 className=" font-semibold sm:font-medium text-4xl sm:text-2xl">Quick Links</h1>
               <div className="text-[#D7D7D7] text-2xl sm:text-base flex flex-col gap-3">
@@ -160,7 +160,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex items-center border-t-2 border-[#D2D2D2] justify-center h-20">
-          <p className=" font-normal text-base text-center sm:text-lg">
+          <p className=" font-normal text-sm text-center sm:text-lg">
             Copyright <sup>&reg;</sup> 2024 All rights Reserved. powered by{" "}
             <Link href="https://www.nityom.com/" target="_blank"
         rel="noopener noreferrer">Nityom</Link>.

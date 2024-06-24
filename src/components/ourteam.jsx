@@ -23,11 +23,11 @@ const Ourteam = () => {
 
   return (
     <section id="our_team">
-      <div className="bg-cover bg-center bg-[url('https://i.ibb.co/gzJKtCJ/Background2.png')] pt-16 px-5 sm:px-10 font-montserrat text-[#FFFFFF]">
+      <div className="bg-cover bg-center bg-[url('https://i.ibb.co/gzJKtCJ/Background2.png')] pt-16 px-2 sm:px-10 font-montserrat text-[#FFFFFF]">
         <div className="flex flex-col gap-10 mx-5 sm:mx-10 md:mx-0 md:gap-0 md:flex-row items-center justify-around scrollanimation animate-appear">
           <div className=" w-auto lg:w-[43rem] flex flex-col gap-5">
             <div>
-              <h1 className=" font-extrabold text-5xl sm:text-6xl">Our Team</h1>
+              <h1 className="px-5 font-extrabold text-5xl sm:text-6xl">Our Team</h1>
             </div>
             <div>
               <p className=" font-normal text-xl sm:text-2xl">

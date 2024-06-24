@@ -90,17 +90,17 @@ const About = () => {
         </div>
       </section>
       <section id="about_hero">
-        <div className="flex flex-col lg:flex-row mx-5 sm:mx-20 my-24 lg:items-center justify-center gap-12">
-          <div className=" flex flex-col lg:w-2/4 gap-8">
+        <div className="flex flex-col lg:flex-row mx-5 sm:mx-10 xl:mx-20 my-24 lg:items-center justify-center gap-12">
+          <div className=" flex flex-col lg:w-[60%] xl:w-2/4 gap-8">
             <div className=" rounded-3xl overflow-hidden scrollanimation animate-appear">
               <Image src={AboutHeroImg} alt="" />
             </div>
             <div className="flex flex-row flex-wrap lg:flex-nowrap gap-8">
-              <div className="bg-gradient-to-r lg:w-1/3 from-sky-200 to-sky-500 h-36 p-2 sm:h-56 lg:h-32 xl:h-56 flex flex-col items-center justify-center rounded-3xl scrollanimation animate-appear">
-                <p className="font-extrabold lg:font-bold lg:text-5xl xl:text-7xl xl:font-extralight text-4xl sm:text-7xl text-white">
+              <div className="bg-gradient-to-r w-[95%] lg:w-1/3 from-sky-200 to-sky-500 p-5 lg:h-32 xl:h-56 flex lg:flex-col items-center justify-between lg:justify-center rounded-3xl scrollanimation animate-appear">
+                <p className="font-extrabold lg:font-bold lg:text-5xl xl:text-6xl text-2xl sm:text-3xl text-white">
                   500K
                 </p>
-                <p className=" font-bold text-base sm:text-xl lg:text-lg xl:text-xl text-white">
+                <p className=" font-bold text-xl lg:text-lg xl:text-xl text-white">
                   Daily Active Users
                 </p>
               </div>
@@ -109,7 +109,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col lg:w-[40rem] gap-10">
+          <div className="flex flex-col lg:w-[30rem] xl:w-[40rem] gap-10">
             <div className="flex flex-col gap-10">
               <div className="scrollanimation animate-appear">
                 <p className=" font-extrabold text-4xl sm:text-6xl">
@@ -210,33 +210,41 @@ const About = () => {
       </section>
       <section id="brand_world">
         <div className="font-montserrat flex items-center mt-36 mb-36 justify-center">
-          <div className="w-[90%] sm:w-2/3 flex flex-col gap-10">
+          <div className="w-[90%] sm:w-[85%] md:w-[80%] lg:w-2/3 flex flex-col gap-10">
             <div className="scrollanimation animate-appear">
-              <p className=" font-extrabold text-3xl sm:text-5xl text-center">
-                Businesses all over the world trust Buffer to build their brand
+              <p className=" font-extrabold text-3xl sm:text-4xl md:text-5xl text-center">
+                Businesses all over the world trust Kalpkari to build their brand
               </p>
             </div>
-            <div className="flex flex-row flex-wrap gap-10 sm:gap-0 items-center justify-around">
-              <div className="flex flex-col items-center justify-center gap-2 scrollanimation animate-appear">
+            <div className="flex flex-row flex-wrap gap-10 sm:gap-5 md:gap-10 lg:gap-10 xl:gap-5 items-center justify-around">
+            <div className="brand-card-wrapper relative overflow-hidden p-[1px]">
+              <div className="brand-card-content flex flex-col items-center max-w-xs min-w-60 p-1 justify-center gap-2 scrollanimation animate-appear">
                 <p className=" font-extrabold text-5xl text-[#38D4FF]">
                   10 years
                 </p>
                 <p className=" font-normal text-xl">In Business</p>
               </div>
-              <div className="flex flex-col items-center justify-center gap-2 scrollanimation animate-appear">
+            </div>
+            <div className="brand-card-wrapper relative overflow-hidden p-[1px]">
+              <div className="brand-card-content flex flex-col items-center max-w-xs min-w-60 p-1 justify-center gap-2 scrollanimation animate-appear">
                 <p className=" font-extrabold text-5xl text-[#38D4FF]">
                   75,000+
                 </p>
                 <p className=" font-normal text-xl">Customers</p>
               </div>
-              <div className="flex flex-col items-center justify-center gap-2 scrollanimation animate-appear">
+            </div>
+            <div className="brand-card-wrapper relative overflow-hidden p-[1px]">
+              <div className="brand-card-content flex flex-col items-center max-w-xs min-w-60 p-1 justify-center gap-2 scrollanimation animate-appear">
                 <p className=" font-extrabold text-5xl text-[#38D4FF]">100k+</p>
                 <p className=" font-normal text-xl">Monthly Blog Readers</p>
               </div>
-              <div className="flex flex-col items-center justify-center gap-2 scrollanimation animate-appear">
+            </div>
+            <div className="brand-card-wrapper relative overflow-hidden p-[1px]">
+              <div className="brand-card-content flex flex-col items-center max-w-xs min-w-60 p-1 justify-center gap-2 scrollanimation animate-appear">
                 <p className=" font-extrabold text-5xl text-[#38D4FF]">1.2m+</p>
                 <p className=" font-normal text-xl">Social Followers</p>
               </div>
+            </div>
             </div>
           </div>
         </div>

@@ -468,7 +468,7 @@ function Product() {
         </div>
       </section>
       <section id="products_features">
-        <div className=" font-montserrat mx-10 my-16">
+        <div className=" font-montserrat mx-5 sm:mx-10 my-16">
           <div className="scrollanimation animate-appear">
             <h1 className=" text-center font-extrabold text-3xl sm:text-5xl text-[#002548]">
               Go beyond ultimate features

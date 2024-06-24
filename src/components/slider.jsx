@@ -8,93 +8,83 @@ import { IoIosArrowBack } from "react-icons/io";
 const data = [
   {
     id: 1,
-    name: "Riya G.,",
+    name: "Riya G.",
     title: "Head of Sales and Marketing",
     img: TestimonialImg,
-    review:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    review: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   },
   {
     id: 2,
-    name: "John D.,",
+    name: "John Doe",
     title: "Chief Technology Officer",
     img: TestimonialImg,
-    review:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. It has survived not only five centuries, but also the leap into electronic typesetting.",
+    review: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. It has survived not only five centuries, but also the leap into electronic typesetting.",
   },
   {
     id: 3,
-    name: "Emily R.,",
+    name: "Emily Rogers",
     title: "Senior Product Manager",
     img: TestimonialImg,
-    review:
-      "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.",
+    review: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.",
   },
   {
     id: 4,
-    name: "Michael S.,",
+    name: "Michael Smith",
     title: "Lead Software Engineer",
     img: TestimonialImg,
-    review:
-      "Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    review: "Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
   {
     id: 5,
-    name: "Jessica B.,",
+    name: "Jessica Brown",
     title: "Director of Operations",
     img: TestimonialImg,
-    review:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+    review: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
   },
   {
     id: 6,
-    name: "David H.,",
+    name: "David Harris",
     title: "Business Analyst",
     img: TestimonialImg,
-    review:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    review: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
   },
   {
     id: 7,
-    name: "Sophia K.,",
+    name: "Sophia King",
     title: "Marketing Coordinator",
     img: TestimonialImg,
-    review:
-      "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+    review: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
   },
   {
     id: 8,
-    name: "James L.,",
+    name: "James Lee",
     title: "Customer Success Manager",
     img: TestimonialImg,
-    review:
-      "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+    review: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
   },
   {
     id: 9,
-    name: "Olivia P.,",
+    name: "Olivia Parker",
     title: "Graphic Designer",
     img: TestimonialImg,
-    review:
-      "It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.",
+    review: "It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.",
   },
   {
     id: 10,
-    name: "Ethan W.,",
+    name: "Ethan White",
     title: "Financial Advisor",
     img: TestimonialImg,
-    review:
-      "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+    review: "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
   },
   {
     id: 11,
-    name: "Ava T.,",
+    name: "Ava Thompson",
     title: "Human Resources Manager",
     img: TestimonialImg,
-    review:
-      "Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC.",
+    review: "Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC.",
   },
 ];
+
 
 const Slider = () => {
   const [people] = useState(data);
@@ -142,7 +132,7 @@ const Slider = () => {
                 <Image src={img} alt={name} className="person-img" />
               </div>
               <div className="flex flex-row items-center justify-center scrollanimation animate-appear">
-              <p><span className=" font-extrabold text-xl">{name}</span> <span className=" text-lg">{title}</span></p>
+              <p><span className=" font-extrabold text-xl">{name}</span><br/><span className=" text-lg">{title}</span></p>
               </div>
               <p className=" max-w-[35em] mx-auto mt-8 text-[#808080] font-normal text-lg sm:text-2xl h-auto leading-normal scrollanimation animate-appear">
                 {review}

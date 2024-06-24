@@ -171,7 +171,7 @@ const Home = () => {
     <main className=" cursor-default">
       <section id="hero">
         <div className="flex flex-col items-center justify-center gap-10 h-auto xl:gap-0 xl:flex-row font-montserrat sm:mx-10 mt-10">
-          <div className=" relative lg:ml-[7.63rem] w-4/5 xl:w-[55%] sm:ml-10">
+          <div className=" relative lg:ml-[7.63rem] w-[90%] sm:w-4/5 xl:w-[55%] sm:ml-10">
             <div className=" absolute top-10 left-4 sm:top-40 sm:left-14 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-purple-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob"></div>
             <div className=" absolute top-28 right-20 sm:top-28 sm:right-72 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-yellow-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob animation-delay-2000"></div>
             <div className=" absolute bottom-56 left-16 sm:bottom-32 sm:left-56 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 xl:w-72 xl:h-72 blur-2xl  bg-pink-300 rounded-full mix-blend-multiply filter opacity-60 animate-blob animation-delay-4000"></div>
@@ -202,19 +202,19 @@ const Home = () => {
                 gradient={true}
                 className="relative mt-12"
               >
-                <div className="mr-14 w-28 ">
+                <div className=" mr-5 sm:mr-14 w-20 sm:w-28 ">
                   <Image src={google} alt="" />
                 </div>
-                <div className="mr-14 w-28 ">
+                <div className=" mr-5 sm:mr-14 w-20 sm:w-28 ">
                   <Image src={airbnb} alt="" />
                 </div>
-                <div className="mr-14 w-28">
+                <div className=" mr-5 sm:mr-14 w-20 sm:w-28">
                   <Image src={creative} alt="" />
                 </div>
-                <div className="mr-14 w-32 ">
+                <div className=" mr-5 sm:mr-14 w-20 sm:w-32 ">
                   <Image src={shopify} alt="" />
                 </div>
-                <div className="mr-14 w-28 ">
+                <div className=" mr-5 sm:mr-14 w-20 sm:w-28 ">
                   <Image src={amazon} alt="" />
                 </div>
               </Marquee>
@@ -313,7 +313,7 @@ const Home = () => {
               transformStyle: "preserve-3d",
               transform,
             }}
-            className="lg:w-[35rem] w-auto ml-10 lg:ml-0 h-auto mr-5 flex hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl bg-gradient-to-t from-[#0094FF] to-[#25CBFF] items-center justify-center scrollanimation animate-appear"
+            className="lg:w-[35rem] w-auto m-2 sm:ml-10 lg:ml-0 h-auto sm:mr-5 flex hover:shadow-2xl hover:shadow-[#25CBFF] rounded-3xl bg-gradient-to-t from-[#0094FF] to-[#25CBFF] items-center justify-center scrollanimation animate-appear"
           >
             <div
               style={{
@@ -404,7 +404,7 @@ const Home = () => {
       </section>
       <Ourteam />
       <section id="blog">
-        <div className=" font-montserrat my-16 mx-10">
+        <div className=" font-montserrat my-16 mx-5 sm:mx-10">
           <div className="flex flex-col gap-5 lg:gap-0 lg:flex-row items-start lg:items-center text-[#002548] justify-around scrollanimation animate-appear">
             <div className=" lg:w-[55rem] flex flex-col gap-5">
               <div>

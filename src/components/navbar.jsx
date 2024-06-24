@@ -24,7 +24,7 @@ const Tab = ({ children, setPosition }) => {
           opacity: 1,
         });
       }}
-      className="relative z-10 block text-white "
+      className="relative z-10 block text-white"
     >
       {children}
     </li>
@@ -37,7 +37,7 @@ const Cursor = ({ position }) => {
       animate={{
         ...position,
       }}
-      className="absolute z-0 h-1 top-7  overflow-hidden rounded-full bg-[#002548] "
+      className="absolute z-0 h-1 top-7 overflow-hidden rounded-full bg-[#002548]"
     />
   );
 };
@@ -59,26 +59,29 @@ const Navbar = () => {
     <section id="navbar" className="">
       <header className="bg-white font-montserrat w-full">
         <nav
-          className="mx-auto flex max-w-full items-center justify-between p-6 lg:px-20"
+          className="mx-auto flex max-w-full items-center justify-between gap-12 py-6 px-3 sm:p-6 lg:px-20"
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">RunPlus</span>
-              <Image className=" h-10 w-auto" src={logo} alt="" />
+              <Image className="h-7 sm:h-10 w-auto" src={logo} alt="" />
             </Link>
           </div>
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 inline-flex items-end justify-center rounded-md p-2.5 text-gray-700"
               onClick={toggleMobileMenu}
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="flex flex-row items-center justify-between gap-10">
+          <div
+            className="flex flex-row items-center justify-between gap-10"
+            onClick={toggleMobileMenu}
+          >
             <PopoverGroup
               onMouseLeave={() => {
                 setPosition((pv) => ({
@@ -99,7 +102,7 @@ const Navbar = () => {
               <Tab setPosition={setPosition}>
                 <Link
                   href="/product"
-                  className=" hover:text-[#002548] font-semibold text-[#808080] leading-6 hover:font-semibold  text-lg"
+                  className="hover:text-[#002548] font-semibold text-[#808080] leading-6 hover:font-semibold text-lg"
                 >
                   Products
                 </Link>
@@ -107,7 +110,7 @@ const Navbar = () => {
               <Tab setPosition={setPosition}>
                 <Link
                   href="/about"
-                  className=" hover:text-[#002548] font-semibold leading-6 text-[#808080] hover:font-semibold  text-lg"
+                  className="hover:text-[#002548] font-semibold leading-6 text-[#808080] hover:font-semibold text-lg"
                 >
                   About Us
                 </Link>
@@ -115,8 +118,8 @@ const Navbar = () => {
               <Cursor position={position} />
             </PopoverGroup>
             <div className="hidden lg:flex lg:flex-1 gap-5 lg:justify-end">
-              <motion.div
-                className=" relative border-2 radial-gradient cursor-pointer rounded-full w-52 h-16 p-[0.125rem]"
+              {/* <motion.div
+                className="relative border-2 radial-gradient cursor-pointer rounded-full w-52 h-16 p-[0.125rem]"
                 initial={{ "--x": "100%" }}
                 animate={{ "--x": "-100%" }}
                 whileTap={{ scale: 0.97 }}
@@ -142,8 +145,8 @@ const Navbar = () => {
                 >
                   Contact Us
                 </Link>
-                <span className=" block absolute inset-0 rounded-full p-px" />
-              </motion.div>
+                <span className="block absolute inset-0 rounded-full p-px" />
+              </motion.div> */}
             </div>
           </div>
         </nav>
@@ -174,29 +177,32 @@ const Navbar = () => {
                   <Link
                     href="/"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     Home
                   </Link>
                   <Link
                     href="/product"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     Products
                   </Link>
                   <Link
                     href="/about"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     About Us
                   </Link>
                 </div>
-                <div className="py-6">
+                {/* <div className="py-6">
                   <div>
-                    <button className=" relative rounded-full bg-white w-52 h-16 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
+                    <button className="relative rounded-full bg-white w-52 h-16 border-2 overflow-hidden before:rounded-full font-semibold text-xl px-3 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-gradient-to-r before:from-sky-200 before:to-sky-500 before:transition-all before:duration-500 hover:text-white hover:before:left-0 hover:before:w-full">
                       <span className="relative z-10">Contact Us</span>
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </DialogPanel>
